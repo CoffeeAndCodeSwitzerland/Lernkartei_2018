@@ -1,32 +1,37 @@
-package viewcontrols;
+package GUIDesign;
 
-import g4p_controls.*; // Need G4P library
-import processing.core.PApplet;
+// Need G4P library
+import g4p_controls.GButton;
+import g4p_controls.GEvent;
+import g4p_controls.GPanel;
+import g4p_controls.GTextArea;
 import views.MainView;
 
 /**
  * This class extends the processing compatible gui-class, by adding own functionality
  * aiming simple designing changes, without changing a lot of other things.
  * You may just add new functionality by overloading events and adding constructor features.
+ * Implement here calls to views and view components.
  *
- * Porting to processing:
- * ======================
- * - make sure, all from the G4P designed event handlers within the processing gui-tab 
- *   are represented here (else program copy and merge them to the code below)
- * - copy (overwriting) all the event lines blow to the gui-tab
+ * Future porting to a processing version:
+ * ======================================
+ * - copy (overwriting/merging) the event lines blow to processing gui-tab
  * 
  * @author WISS
  *
  */
-public class MyControl extends gui
+public abstract class MyGUIChanges extends PCGUIClass
 {
-	/**
-	 * The following code may be merged to processing (within second Sketch named gui)
-	 */
-
+	public enum Command
+	{
+		SEND,
+		DO_IT,
+		DONT_DO
+	}
+	
 		public void button1_click1(GButton source, GEvent event) {
 		  logEvent("button1",source.getClass().getSimpleName(),source.getText(),event);
-		  MainView.getInstance().actOnButton(source.getText(), panel1, textarea1);
+		  MainView.getInstance().actOnButton(Command.SEND, panel1, textarea1);
 		}
 
 		public void panel1_Click1(GPanel source, GEvent event) {
@@ -42,29 +47,20 @@ public class MyControl extends gui
 		  NextWindow.setVisible(true); // Navigate to View 2
 		}
 
-		synchronized public void win_draw2(PApplet appc, GWinData data) {
-		  appc.background(230);
-		}
-
 		public void textarea2_change1(GTextArea source, GEvent event) {
 			logEvent("textarea2",source.getClass().toString(),source.getText(),event);
 		}
 
 		public void button3_click1(GButton source, GEvent event) {
 			logEvent("button3",source.getClass().toString(),source.getText(),event);
-		} 
-
-		/**
-		 * The following code may be merged to processing (first Sketch named ...)
-		 */
-		// Use this method to add additional statements
-		// to customise the GUI controls
-		public void customGUI(){
-			NextWindow.setVisible(false);
 		}
 
-		public void logEvent (String srcName, String scrClass, String srcText, GEvent event ) {
-			println(srcName+"-"+scrClass+" ("+srcText+") >> GEvent: " + event.name() +"." + event + " @ " + millis());
-		}
+		public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:206151:
+			logEvent("button4",source.getClass().toString(),source.getText(),event);
+		} //_CODE_:button4:206151:
+
+		public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:222117:
+			logEvent("button5",source.getClass().toString(),source.getText(),event);
+		} //_CODE_:button5:222117:
 
 }

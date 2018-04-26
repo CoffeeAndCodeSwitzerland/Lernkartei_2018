@@ -1,41 +1,32 @@
-package viewcontrols;
+package GUIDesign;
 
-import g4p_controls.*; // Need G4P library
+import controls.ConfigApplication;
+import g4p_controls.*;
 import processing.core.PApplet;
-
 /**
- * This class hat the unusual name 'gui' instead as something like "MainView".
- * This is to keep it compatible with the generated class name by the processing
- * GUI build tool "GP4" (see warning below).
- *  
- * Porting to processing:
- * ======================
- * - copy lines within this class to the main sketch
- * - copy  
+ * Import all lines from gui.pde into this class after any GUI change
+ * Do no other changes here.
+ * 
  * @author WISS
  *
  */
-public abstract class gui extends ConfigApplication
-{
-	/**
-	 * The following code may be ported 1:1 to processing (second Sketch named gui)
-	 */
+public abstract class PCGUIClass extends ConfigApplication {
 
-	/* =========================================================
-	 * ====                   WARNING                        ===
-	 * =========================================================
-	 * The code in this tab has been generated from the GUI form
-	 * designer and care should be taken when editing this file.
-	 * Only add/edit code inside the event handlers i.e. only
-	 * use lines between the matching comment tags. e.g.
+/* =========================================================
+ * ====                   WARNING                        ===
+ * =========================================================
+ * The code in this tab has been generated from the GUI form
+ * designer and care should be taken when editing this file.
+ * Only add/edit code inside the event handlers i.e. only
+ * use lines between the matching comment tags. e.g.
 
-	 void myBtnEvents(GButton button) { //_CODE_:button1:12356:
-	     // It is safe to enter your event code here  
-	 } //_CODE_:button1:12356:
-	 
-	 * Do not rename this tab!
-	 * =========================================================
-	 */
+ void myBtnEvents(GButton button) { //_CODE_:button1:12356:
+     // It is safe to enter your event code here  
+ } //_CODE_:button1:12356:
+ 
+ * Do not rename this tab!
+ * =========================================================
+ */
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:button1:575168:
   println("button1 - GButton >> GEvent." + event + " @ " + millis());
@@ -56,6 +47,10 @@ public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:2061
 public void button2_click1(GButton source, GEvent event) { //_CODE_:button2:655042:
   println("button2 - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:button2:655042:
+
+public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:222117:
+  println("button5 - GButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:button5:222117:
 
 synchronized public void win_draw2(PApplet appc, GWinData data) { //_CODE_:NextWindow:575316:
   appc.background(230);
@@ -92,7 +87,7 @@ public void createGUI(){
   textarea1 = new GTextArea(this, 2, 25, 160, 101, G4P.SCROLLBARS_NONE);
   textarea1.setOpaque(true);
   textarea1.addEventHandler(this, "textarea1_change1");
-  button4 = new GButton(this, 185, 177, 80, 30);
+  button4 = new GButton(this, 242, 173, 80, 30);
   button4.setText("Face text");
   button4.addEventHandler(this, "button4_click1");
   panel1.addControl(textarea1);
@@ -100,6 +95,9 @@ public void createGUI(){
   button2 = new GButton(this, 291, 166, 80, 30);
   button2.setText("Next");
   button2.addEventHandler(this, "button2_click1");
+  button5 = new GButton(this, 72, 217, 80, 32);
+  button5.setText("Face text");
+  button5.addEventHandler(this, "button5_click1");
   NextWindow = GWindow.getWindow(this, "Window title", 0, 0, 240, 120, JAVA2D);
   NextWindow.noLoop();
   NextWindow.addDrawHandler(this, "win_draw2");
@@ -120,7 +118,9 @@ GPanel panel1;
 GTextArea textarea1; 
 GButton button4; 
 GButton button2; 
+GButton button5; 
 GWindow NextWindow;
 GTextArea textarea2; 
 GButton button3; 
+
 }

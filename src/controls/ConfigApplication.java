@@ -1,6 +1,7 @@
-package viewcontrols;
+package controls;
 
 import basics.PAppletInterface;
+import g4p_controls.GEvent;
 import processing.core.PApplet;
 /**
  * Container for the processing sketch code part:
@@ -15,6 +16,9 @@ import processing.core.PApplet;
  */
 public abstract class ConfigApplication extends PApplet implements PAppletInterface 
 {
+	public static PApplet me=null;
+	// The following methods will be implemented in inheriting classes
+	abstract public void logEvent (String srcName, String scrClass, String srcText, GEvent event );
 	abstract public void createGUI();
 	abstract public void customGUI();
 

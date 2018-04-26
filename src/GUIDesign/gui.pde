@@ -34,6 +34,10 @@ public void button2_click1(GButton source, GEvent event) { //_CODE_:button2:6550
   println("button2 - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:button2:655042:
 
+public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:222117:
+  println("button5 - GButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:button5:222117:
+
 synchronized public void win_draw2(PApplet appc, GWinData data) { //_CODE_:NextWindow:575316:
   appc.background(230);
 } //_CODE_:NextWindow:575316:
@@ -69,7 +73,7 @@ public void createGUI(){
   textarea1 = new GTextArea(this, 2, 25, 160, 101, G4P.SCROLLBARS_NONE);
   textarea1.setOpaque(true);
   textarea1.addEventHandler(this, "textarea1_change1");
-  button4 = new GButton(this, 240, 169, 80, 30);
+  button4 = new GButton(this, 242, 173, 80, 30);
   button4.setText("Face text");
   button4.addEventHandler(this, "button4_click1");
   panel1.addControl(textarea1);
@@ -77,6 +81,9 @@ public void createGUI(){
   button2 = new GButton(this, 291, 166, 80, 30);
   button2.setText("Next");
   button2.addEventHandler(this, "button2_click1");
+  button5 = new GButton(this, 72, 217, 80, 32);
+  button5.setText("Face text");
+  button5.addEventHandler(this, "button5_click1");
   NextWindow = GWindow.getWindow(this, "Window title", 0, 0, 240, 120, JAVA2D);
   NextWindow.noLoop();
   NextWindow.addDrawHandler(this, "win_draw2");
@@ -97,6 +104,7 @@ GPanel panel1;
 GTextArea textarea1; 
 GButton button4; 
 GButton button2; 
+GButton button5; 
 GWindow NextWindow;
 GTextArea textarea2; 
 GButton button3; 

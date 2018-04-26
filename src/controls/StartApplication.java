@@ -1,4 +1,4 @@
-package starters;
+package controls;
 import processing.core.PApplet;
 
 /**
@@ -13,7 +13,7 @@ import processing.core.PApplet;
 public class StartApplication extends PApplet  {
 
 	public static void main(String[] args) {
-		PApplet.main("viewcontrols.MyControl");
+		PApplet.main("GUIDesign.MyControl");
 	}
 
 }
