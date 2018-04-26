@@ -1,0 +1,22 @@
+"Als <Rolle> möchte ich <Ziel/Wunsch>, um <Nutzen>"
+
+-Als Lernkartei Psychologe möchte ich, dass die Applikation einmal pro Tag eine Push Notifiction macht, um die User daran zu erinnern das sie noch lernen müssen, denn das regelmässige Lernen ist sehr wichtig.
+.-Feedback 
+
+-Als Lernkartei Psychologe möchte ich, dass die Applikation die Antwort sowie die Frage vorliest, um den Lerneffekt zu verstärken.
+.-Einfache Bedienung
+
+-Als Lernkartei Psychologe möchte ich, dass die Applikation genau die Systematik braucht welche Standartmässig benutzt wird, da sich das Hirn mit gewissen Zeitabständen die Dinge besser aufnehmen kann.
+.-Auswertung
+
+-Als Lernkartei Psychologe möchte ich, dass das Lernkarteiprinzip mit den verschiedenen Boxen konsequent durchgezogen wird, da so der Lernprozess maximiert wird.
+.-Auswertung 
+
+-Als Lernkartei Psychologe möchte ich, dass es Kontrollfragen gibt ,um den Lerneffekt zu verstärken.
+.-Kontrolle
+
+-Als Lernkartei Psychologe möchte ich, dass es eine belohnung oder ein stillendes Bedürfnis beim lernen geben soll, da man so sich mehr konzentriert und sich mühe gibt.
+.-belohnung
+
+-Als Lernkartei Psychologe möchte ich, dass es möglich ist notizen zu machen ,um das gelernte abzusichern.
+.-Einfache Bedienung

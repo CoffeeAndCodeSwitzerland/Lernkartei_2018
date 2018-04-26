@@ -1,0 +1,2414 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="9.2" multi-file="no">
+  <meta>
+    <name>PongGame</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>10</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>4</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>16</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlAssociation" />
+        <value>4</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlGeneralization" />
+        <value>18</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>17</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlRealization" />
+        <value>13</value>
+      </counter>
+      <counter>
+        <item-type type="AbstractElementGroup" />
+        <value>15</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>73</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>69</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management>
+    <persons>
+      <person id="Pf3ee3d8c9d8e4e23b887c0841446840d">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <glossary />
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Player(Uml.Player)" tid="" name="Player(Uml.Player)" description="" nullable="false" />
+      <type id="Player" tid="" name="Player" description="" nullable="false" />
+      <type id="Graphics" tid="" name="Graphics" description="" nullable="false" />
+      <type id="KeyEvent" tid="" name="KeyEvent" description="" nullable="false" />
+      <type id="StartPanel" tid="" name="StartPanel" description="" nullable="false" />
+      <type id="Class:di538951929379176295" tid="" name="EndPanel" description="" nullable="false" class-ref="di538951929379176295" />
+      <type id="PongPanel" tid="" name="PongPanel" description="" nullable="false" />
+      <type id="CardLayout" tid="" name="CardLayout" description="" nullable="false" />
+      <type id="JPanel" tid="" name="JPanel" description="" nullable="false" />
+      <type id="MyFont" tid="" name="MyFont" description="" nullable="false" />
+      <type id="VLine" tid="" name="VLine" description="" nullable="false" />
+      <type id="Score" tid="" name="Score" description="" nullable="false" />
+      <type id="Class:di968086801477803464" tid="" name="Pad" description="" nullable="false" class-ref="di968086801477803464" />
+      <type id="Class:di963838408580097854" tid="" name="Ball" description="" nullable="false" class-ref="di963838408580097854" />
+      <type id="Timer" tid="" name="Timer" description="" nullable="false" />
+      <type id="Class:di735420309662464222" tid="" name="MainFrame" description="" nullable="false" class-ref="di735420309662464222" />
+      <type id="long" tid="" name="long" description="" nullable="false" />
+      <type id="Class:di539795541298127387" tid="" name="GameFrame" description="" nullable="false" class-ref="di539795541298127387" />
+      <type id="Font" tid="" name="Font" description="" nullable="false" />
+    </custom-types>
+  </types>
+  <filters />
+  <items />
+  <models>
+    <model id="p11da2dd3ca3249d384d4d6b3d46ce5de_439425788" name="Model 1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>03/31/2016 13:56:58</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="pcda7530a78f1475d95330606b9d1832c_767994579" name="ClassDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-547,-307" zoom="0.8">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>03/31/2016 13:56:58</creation-date>
+          <change-date>04/05/2016 13:24:05</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di930439902475311953" cid="C001" type="class" name="Pong2" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 13:57:09">
+            <style class="default" />
+            <attributes>
+              <attribute id="a7f321a06144741a59b288eedc1facab4715" cid="AT001" name="appname" type="String" type-id="Uml.String" visibility="public" static="true" default-value="Pong II">
+                <style class="default" />
+              </attribute>
+              <attribute id="aaebf2ad90882491e81c9dfc7bb3daaa4711" cid="AT002" name="appwidth" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="500">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1e8281a8561a4d0494d63444a41580db452" cid="AT003" name="appheight" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="500">
+                <style class="default" />
+              </attribute>
+              <attribute id="a81bfadf3015d4b9a94719dcec074a2fc809" cid="AT004" name="paddleSize" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="10">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab0ceb69978474bca89e840cd14c20359391" cid="AT005" name="playerXPos" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="25">
+                <style class="default" />
+              </attribute>
+              <attribute id="a80dba686f7bd4c36b9a5619cd924ccbd221" cid="AT006" name="playerSize" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="50">
+                <style class="default" />
+              </attribute>
+              <attribute id="a23f740ec8f75493f901960e25258376b751" cid="AT007" name="ballDimater" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="20">
+                <style class="default" />
+              </attribute>
+              <attribute id="aaa82a10530324c79beb444469263ffde755" cid="AT008" name="ballSpeed" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="5">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7e15351b03d942a38af04b1f4dd468ec543" cid="AT009" name="gameSpeed" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="(int) (1000/100.0)">
+                <style class="default" />
+              </attribute>
+              <attribute id="a20d8bb28487b42cc8bd22b655b668bbd217" cid="AT010" name="paddleSpeed" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="10">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7461cab8a2524183b1e24410854cea1e63" cid="AT011" name="scoreXPos" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="100">
+                <style class="default" />
+              </attribute>
+              <attribute id="af730f9befdb94becb951874d3471e178713" cid="AT012" name="scoreYPos" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="100">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6235c5425eeb4ee9bca4a26b56002416893" cid="AT013" name="scoreFontSize" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="36">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6dfd464de2674d10af54895dfa504b5f699" cid="AT014" name="fontSize" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="18">
+                <style class="default" />
+              </attribute>
+              <attribute id="a168160e8a6a74b9fa680d67c724aab25347" cid="AT015" name="maxPoints" type="Integer" type-id="Uml.Integer" visibility="public" static="true" default-value="3">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8aca9025220c4678b0a3934c206e56e2661" cid="AT016" name="debugOn" type="Boolean" type-id="Uml.Boolean" visibility="public" static="true" default-value="true">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8f4bd120744943cf81c81885ae053599734" cid="AT055" name="mainFrame" type="MainFrame" type-id="Class:di735420309662464222" visibility="public" static="true" default-value="null">
+                <style class="default" />
+              </attribute>
+              <attribute id="a777c95f1346d4caf85bf4d10509fb02f604" cid="AT056" name="debug" type="Boolean" type-id="Uml.Boolean" visibility="public" static="true" default-value="false">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o9248703292c94119a61840aa81004d9a22" cid="OP001" name="debug" type="" type-id="" visibility="public" static="true">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pee0404392c1d413a9e2e2e82eab9df4e" name="text" type="String" type-id="Uml.String" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">if (debug)
+System.out.println(text);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o6989c238570b40458d15c05191a30ff1493" cid="OP045" name="main" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p07e3d99bc8704be89138f5521390bf79" name="args" type="String" type-id="Uml.String" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript">try { // Exceptions nicht vergessen
+            debug("Start...");
+            mainFrame = new MainFrame(); // hier nur ein Fenster benötigt
+            
+        } catch (Exception e) {
+            debug ("Exception...");
+            System.out.println(e.toString()); // dies macht die Umgebung sowieso, aber jetzt kann ich evtl. eingreifen 
+        }</source-code>
+                  <source-code language="Java">try { // Exceptions nicht vergessen
+            debug("Start...");
+            mainFrame = new MainFrame(); // hier nur ein Fenster benötigt
+            
+        } catch (Exception e) {
+            debug ("Exception...");
+            System.out.println(e.toString()); // dies macht die Umgebung sowieso, aber jetzt kann ich evtl. eingreifen 
+        }</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class Pong2 {
+    
+    // ToDo: 
+    // - User Sprache festlegen (änderbar)
+    // - Look and feel festlegen (änderbar)
+    // - Dateiname und Pfad ablegen
+    // - Standard Komponeneten wie ZZ Geni und Timer festlegen
+    // - Tastatur Shortcuts
+    // - config Datei (txt oder xml) festlegen, nachladen und Werte anpassen
+    // - basis daten laden (zum Bsp. Texte mit Übersetzungen)
+    // - Objekt- und Threadlandschaft aufbauen
+
+    public static final String appname = "Pong II";
+    
+    public static final int appwidth = 500;
+    public static final int appheight = 500;
+    public static final int paddleSize = 10;
+    public static final int playerXPos = 25;
+    public static final int playerSize = 50;
+    public static final int ballDimater = 20;
+    public static final int ballSpeed = 5;
+    public static final int gameSpeed = (int) (1000/100.0);
+    public static final int paddleSpeed = 10;
+    public static final int scoreXPos = 100;
+    public static final int scoreYPos = 100;
+    public static final int scoreFontSize = 36;
+    public static final int fontSize = 18;
+    public static final int maxPoints = 3;
+    public static final boolean debugOn = true;
+    public static MainFrame mainFrame = null;
+    
+    
+    public static boolean debug = false;
+    
+    public static void debug (String text) {
+        if (debug)
+            System.out.println(text);
+    }
+    
+    public static void main(String[] args) {
+
+        try { // Exceptions nicht vergessen
+            debug("Start...");
+            mainFrame = new MainFrame(); // hier nur ein Fenster benötigt
+            
+        } catch (Exception e) {
+            debug ("Exception...");
+            System.out.println(e.toString()); // dies macht die Umgebung sowieso, aber jetzt kann ich evtl. eingreifen 
+        }
+    }
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di963838408580097854" cid="C002" type="class" name="Ball" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 14:12:25">
+            <style class="default" />
+            <attributes>
+              <attribute id="a580636182a4b46a2855d319fff8244d8613" cid="AT018" name="ballX" type="Integer" type-id="Uml.Integer" visibility="private" default-value="250">
+                <style class="default" />
+              </attribute>
+              <attribute id="a5877635fa6db461593f0e406bca21df8928" cid="AT019" name="ballY" type="Integer" type-id="Uml.Integer" visibility="private" default-value="250">
+                <style class="default" />
+              </attribute>
+              <attribute id="aa099458893b641e687f6b90131967da3786" cid="AT020" name="diameter" type="Integer" type-id="Uml.Integer" visibility="private" default-value="20">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4f3228d845e6480daf68810453a33889572" cid="AT021" name="ballDeltaX" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8ed3acd150b34a3b9a0024380457b004236" cid="AT022" name="ballDeltaY" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a459bc09951ba4090b08a197e3907c1cc946" cid="AT023" name="nextBallLeft" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="add1982b6e19246db997148e9c7515057970" cid="AT024" name="nextBallRight" type="" type-id="" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a1a20c188d2364278904a1e33d8c00b5664" cid="AT025" name="nextBallTop" type="" type-id="" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a397b4abee9f54b59a34de11c42db236d440" cid="AT026" name="nextBallBottom" type="" type-id="" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="affc64bb65b394d05a37ef4553490356e216" cid="AT027" name="maxBallSpeed" type="" type-id="" visibility="private" default-value="3">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8a8881f1585d4dada7ecff340d5652eb978" cid="AT057" name="generator" type="" type-id="" visibility="protected" static="true" default-value="new Random()">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o5771d7801d6d4ed9a664edd7d554d0fa971" cid="OP002" name="reset" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">diameter = Pong2.ballDimater;
+        ballX =    Pong2.appwidth  / 2;
+        ballY =    Pong2.appheight / 2;
+        int initialSpeed = maxBallSpeed/2+1;
+        while (ballDeltaX == 0)
+            ballDeltaX = -initialSpeed + generator.nextInt(2*initialSpeed); // =&gt; Zufallszahl zwischen -5..+5;
+        while (ballDeltaY == 0)
+            ballDeltaY = -initialSpeed + generator.nextInt(2*initialSpeed); // =&gt; Zufallszahl zwischen -5..+5;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o6ba1698813df403ca82950d555f57d17805" cid="OP003" name="calculateMove" type="" type-id="" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p849f0d037fbc4701844e8ce3a74c4388" name="h" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript">//where will the ball be after it moves?
+        nextBallLeft   = ballX + ballDeltaX;
+        nextBallRight  = nextBallLeft + diameter;
+        nextBallTop    = ballY + ballDeltaY;
+        nextBallBottom = nextBallTop + diameter;
+
+        //ball bounces off top and bottom of screen
+        if (nextBallTop &lt; 0 || nextBallBottom &gt; h) {
+            ballDeltaY *= -1;
+            //if (ballDeltaY &lt; maxBallSpeed) ballDeltaY++;
+        }</source-code>
+                  <source-code language="Java">//where will the ball be after it moves?
+nextBallLeft   = ballX + ballDeltaX;
+nextBallRight  = nextBallLeft + diameter;
+nextBallTop    = ballY + ballDeltaY;
+nextBallBottom = nextBallTop + diameter;
+
+//ball bounces off top and bottom of screen
+if (nextBallTop &lt; 0 || nextBallBottom &gt; h) {
+    ballDeltaY *= -1;
+//if (ballDeltaY &lt; maxBallSpeed) ballDeltaY++;
+        }</source-code>
+                  <source-code language="Vb6" />
+                </source-codes>
+              </operation>
+              <operation id="oac2c9ff809f8436ea360c8420fc13761532" cid="OP004" name="isOffLeftSide" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p47c014c13a4e41bfa69a95419470d4ed" name="p" type="Player" type-id="Player" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">int playerR      = p.getPad().getBallSide();
+int playerTop    = p.getPad().getTopPos();
+int playerBottom = p.getPad().getBottomPos();
+
+//will the ball go off the left side?
+if (nextBallLeft &lt; playerR) { 
+//is it going to miss the paddle?
+     if (nextBallTop &gt; playerBottom || nextBallBottom &lt; playerTop) {
+             reset ();
+             return true;
+            } else {
+                if (ballDeltaY == 0) 
+                    ballDeltaY += p.getPad().getLastMove();
+                ballDeltaX *= -1;
+                diameter++;
+                if (ballDeltaX &lt; maxBallSpeed) ballDeltaX++;
+            }
+        }
+        return false;</source-code>
+                  <source-code language="Vb6" />
+                </source-codes>
+              </operation>
+              <operation id="oaf8ab28a7a56424394587a7b405bce37498" cid="OP005" name="isOffRightSide" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p1064ff8a86174fee86dfa506d2f61b66" name="p" type="Player" type-id="Player" />
+                  <parameter id="p13581f24c9d844e49d958c69fc8cab76" name="" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        int playerL      = p.getPad().getBallSide();
+        int playerTop    = p.getPad().getTopPos();
+        int playerBottom = p.getPad().getBottomPos();
+
+        //will the ball go off the right side?
+        if (nextBallRight &gt; playerL ) { 
+            //is it going to miss the paddle?
+            if (nextBallTop &gt; playerBottom || nextBallBottom &lt; playerTop) {
+                reset ();
+                return true;
+            } else {
+                ballDeltaX *= -1;
+                diameter++;
+            }
+        }
+        return false;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o690f28de3c4c4d9b96d0326f8b9770c0869" cid="OP006" name="move" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        ballX += ballDeltaX;
+        ballY += ballDeltaY;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o6ab58cb4d6a8484f90c764539b144d0d176" cid="OP007" name="draw" type="" type-id="" visibility="private">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pf038f35a899249f19998476a644d16a5" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">g.fillOval (ballX, ballY, diameter, diameter);</source-code>
+                  <source-code language="Vb6">g.fillOval (ballX, ballY, diameter, diameter);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oc4c50d8690084b1da0651a8b24e487c9818" cid="OP046" name="Ball" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">maxBallSpeed = Pong2.ballSpeed;
+reset ();</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class Ball {
+
+    protected static Random generator = new Random();
+    private int ballX = 250;
+    private int ballY = 250;
+    private int diameter  = 20;
+    private int ballDeltaX = 0;
+    private int ballDeltaY = 0;
+    private int nextBallLeft   = 0;
+    private int nextBallRight  = 0;
+    private int nextBallTop    = 0;
+    private int nextBallBottom = 0;
+    private int maxBallSpeed   = 3;
+
+    public Ball () {
+        maxBallSpeed = Pong2.ballSpeed;
+        reset ();
+    }
+    
+    public void reset () {
+        diameter = Pong2.ballDimater;
+        ballX =    Pong2.appwidth  / 2;
+        ballY =    Pong2.appheight / 2;
+        int initialSpeed = maxBallSpeed/2+1;
+        while (ballDeltaX == 0)
+           ballDeltaX = -initialSpeed + generator.nextInt(2*initialSpeed); // =&gt; Zufallszahl zwischen -5..+5;
+        while (ballDeltaY == 0)
+            ballDeltaY = -initialSpeed + generator.nextInt(2*initialSpeed); // =&gt; Zufallszahl zwischen -5..+5;
+    }
+    
+    void calculateMove (int h) { //where will the ball be after it moves?
+        nextBallLeft   = ballX + ballDeltaX;
+        nextBallRight  = nextBallLeft + diameter;
+        nextBallTop    = ballY + ballDeltaY;
+        nextBallBottom = nextBallTop + diameter;
+
+        //ball bounces off top and bottom of screen
+        if (nextBallTop &lt; 0 || nextBallBottom &gt; h) {
+            ballDeltaY *= -1;
+            //if (ballDeltaY &lt; maxBallSpeed) ballDeltaY++;
+        }
+    }
+        
+    public boolean isOffLeftSide (Player p) {
+        int playerR      = p.getPad().getBallSide();
+        int playerTop    = p.getPad().getTopPos();
+        int playerBottom = p.getPad().getBottomPos();
+
+        //will the ball go off the left side?
+        if (nextBallLeft &lt; playerR) { 
+            //is it going to miss the paddle?
+            if (nextBallTop &gt; playerBottom || nextBallBottom &lt; playerTop) {
+                reset ();
+                return true;
+            } else {
+                if (ballDeltaY == 0) 
+                    ballDeltaY += p.getPad().getLastMove();
+                ballDeltaX *= -1;
+                diameter++;
+                if (ballDeltaX &lt; maxBallSpeed) ballDeltaX++;
+            }
+        }
+        return false;
+    }
+    
+    public boolean isOffRightSide (Player p) {
+        int playerL      = p.getPad().getBallSide();
+        int playerTop    = p.getPad().getTopPos();
+        int playerBottom = p.getPad().getBottomPos();
+
+        //will the ball go off the right side?
+        if (nextBallRight &gt; playerL ) { 
+            //is it going to miss the paddle?
+            if (nextBallTop &gt; playerBottom || nextBallBottom &lt; playerTop) {
+                reset ();
+                return true;
+            } else {
+                ballDeltaX *= -1;
+                diameter++;
+            }
+        }
+        return false;
+    }
+    
+    public void move () { //move the ball
+        ballX += ballDeltaX;
+        ballY += ballDeltaY;
+    }
+    
+    void draw (Graphics g) { //draw the ball
+        g.fillOval (ballX, ballY, diameter, diameter);
+    }
+}</source-code>
+            </source-codes>
+          </item>
+          <item id="di538951929379176295" cid="C004" type="class" name="EndPanel" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 14:50:39">
+            <style class="default" />
+            <attributes>
+              <attribute id="a8cc935fb079547e5978e24000424d72f406" cid="AT058" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="of3c4cd1d7f5846698ac642a59e9904ac575" cid="OP008" name="stop" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="JavaScript" />
+                  <source-code language="Java">        Pong2.debug("No focus on End...");
+        setFocusable(false);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o630606dd2ff248b9ae08ef92adf2b6eb683" cid="OP009" name="start" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Delphi" />
+                  <source-code language="Java">        Pong2.debug("Init End Listener...");
+        setFocusable(true);
+        requestFocus();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="off914866f7074652a71b4ea15e518c92909" cid="OP010" name="paintComponent" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p88007fecc81c47e4898e4909500d6fe2" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript">       super.paintComponent (g);
+       if (Pong2.mainFrame != null) {
+           Player playerL1 = Pong2.mainFrame.getPongPanel().getPlayerL1();
+           Player playerR2 = Pong2.mainFrame.getPongPanel().getPlayerR2();
+           playerL1.drawPlayerScore (g);       // draw the scores
+           playerR2.drawPlayerScore (g);
+           String press = "Player 1 Wins!";
+           if (playerL1.getScore() &lt; playerR2.getScore()) press = "Player 2 Wins!";
+           drawText (g, press, Pong2.scoreFontSize, Pong2.appheight/3+25);
+       } else {
+           drawText (g, "Game Over!", Pong2.scoreFontSize, Pong2.appheight/3+25);
+       }
+       drawText (g, "Press space to restart.", Pong2.fontSize, Pong2.appheight-100);</source-code>
+                  <source-code language="Java">       super.paintComponent (g);
+       if (Pong2.mainFrame != null) {
+           Player playerL1 = Pong2.mainFrame.getPongPanel().getPlayerL1();
+           Player playerR2 = Pong2.mainFrame.getPongPanel().getPlayerR2();
+           playerL1.drawPlayerScore (g);       // draw the scores
+           playerR2.drawPlayerScore (g);
+           String press = "Player 1 Wins!";
+           if (playerL1.getScore() &lt; playerR2.getScore()) press = "Player 2 Wins!";
+           drawText (g, press, Pong2.scoreFontSize, Pong2.appheight/3+25);
+       } else {
+           drawText (g, "Game Over!", Pong2.scoreFontSize, Pong2.appheight/3+25);
+       }
+       drawText (g, "Press space to restart.", Pong2.fontSize, Pong2.appheight-100);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o7d84668add474c29867cbf4c84fb0b5d813" cid="OP011" name="keyPressed" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0b4b5247089944ac8a0a4b07331f2bb0" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug("EndKeySpacePress");
+          if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            MainFrame m = Pong2.mainFrame;
+            setFocusable(false);
+            m.gotoNextLayout();
+        }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o3dcf24d4cfb84abcab2d85240d9c619b231" cid="OP012" name="keyReleased" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd2ac5d375d534402a33543120edfe3e2" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript">Pong2.debug("EndKeySpaceRel");e.getKeyCode();</source-code>
+                  <source-code language="Delphi">Pong2.debug("EndKeySpaceRel");e.getKeyCode();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o80c9988e785b455abc527c78abcad3f8217" cid="OP013" name="keyTyped" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pfeeac6bb87c641fb9329c0c905cc95c6" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">Pong2.debug("EndKeySpaceTyped"); e.getKeyCode</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o59f752c60a784c91bbf59925651b3a2a361" cid="OP047" name="EndPanel" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript">        Pong2.debug("Init End...");
+        addKeyListener(this);
+        setBackground(Color.BLUE);
+        stop();</source-code>
+                  <source-code language="Java">        Pong2.debug("Init End...");
+        addKeyListener(this);
+        setBackground(Color.BLUE);
+        stop();</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class EndPanel extends GameFrame implements KeyListener {
+
+    private static final long serialVersionUID = 1L;
+    
+    public EndPanel () {
+        Pong2.debug("Init End...");
+        addKeyListener(this);
+        setBackground(Color.BLUE);
+        stop();
+    }
+
+    public void stop () {
+        Pong2.debug("No focus on End...");
+        setFocusable(false);
+    }
+
+    public void start () {
+        Pong2.debug("Init End Listener...");
+        setFocusable(true);
+        requestFocus();
+    }
+
+    public void paintComponent (Graphics g) {
+       super.paintComponent (g);
+       if (Pong2.mainFrame != null) {
+           Player playerL1 = Pong2.mainFrame.getPongPanel().getPlayerL1();
+           Player playerR2 = Pong2.mainFrame.getPongPanel().getPlayerR2();
+           playerL1.drawPlayerScore (g);       // draw the scores
+           playerR2.drawPlayerScore (g);
+           String press = "Player 1 Wins!";
+           if (playerL1.getScore() &lt; playerR2.getScore()) press = "Player 2 Wins!";
+           drawText (g, press, Pong2.scoreFontSize, Pong2.appheight/3+25);
+       } else {
+           drawText (g, "Game Over!", Pong2.scoreFontSize, Pong2.appheight/3+25);
+       }
+       drawText (g, "Press space to restart.", Pong2.fontSize, Pong2.appheight-100);
+   }
+
+    public void keyPressed(KeyEvent e) {
+        Pong2.debug("EndKeySpacePress");
+          if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            MainFrame m = Pong2.mainFrame;
+            setFocusable(false);
+            m.gotoNextLayout();
+        }
+      }
+
+    @Override
+    public void keyReleased(KeyEvent e) { Pong2.debug("EndKeySpaceRel");e.getKeyCode();}
+
+    @Override
+    public void keyTyped(KeyEvent e) {Pong2.debug("EndKeySpaceTyped"); e.getKeyCode();}
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di539795541298127387" cid="C005" type="class" name="GameFrame" style-class="" is-abstract="true" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 14:58:08">
+            <style class="default" />
+            <attributes>
+              <attribute id="acefe722b38ea4c20ac857873303e2fa4723" cid="AT059" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oa074712af00f4a8097188960821ce447806" cid="OP014" name="paintComponent" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0cc54714442849a598240cd62ebf74f3" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        super.paintComponent(g);
+        g.setColor(Color.WHITE);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="of027cb473d934657a8be0d9f9a5b3e93750" cid="OP015" name="drawText" type="" type-id="" visibility="protected">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd3d0220cb76846f4ab5fc9e21f3ab4e0" name="g" type="Graphics" type-id="Graphics" />
+                  <parameter id="p6db256c856a84cde94a0bf384ceac209" name="text" type="String" type-id="Uml.String" />
+                  <parameter id="p2987c098aa434122b732826cfe5299ba" name="fontSize" type="Integer" type-id="Uml.Integer" />
+                  <parameter id="p648064315b4342f19bb574d7c75e9e32" name="ypos" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        //g.setFont(myFont.setSize(fontSize)); ToDo: funktioniert so nicht
+        g.setFont(new MyFont(fontSize));
+        int xpos = Pong2.appwidth/2-(text.length()/4)*fontSize;
+        g.drawString(text, xpos, ypos);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o383238bdcfbe45b69ad0663a6c2fdefb110" cid="OP016" name="drawText" type="" type-id="" visibility="protected">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pa28f8767bc8e41ca897cbe3d51bc8618" name="g" type="Graphics" type-id="Graphics" />
+                  <parameter id="p0384d054230140a2982d69507bd6236d" name="text" type="String" type-id="Uml.String" />
+                  <parameter id="p6f7ece04b93246ae93e3fe8c58681272" name="fontSize" type="Integer" type-id="Uml.Integer" />
+                  <parameter id="p1c01469413fa4c6c84460001cc0d22b2" name="ypos" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        //g.setFont(myFont.setSize(fontSize));   ToDo: funktioniert so nicht
+        g.setFont(new MyFont(fontSize));
+        g.drawString(text, xpos, ypos);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oeca91305c0f94cb8ae95fa66c8489de9772" cid="OP048" name="GameFrame" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug("Set Frame Focusable false...");
+        setBackground(Color.BLACK);
+        setSize(Pong2.appwidth+Pong2.playerXPos-5, Pong2.appheight);</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public abstract class GameFrame extends JPanel {
+
+    private static final long serialVersionUID = 1L;
+    //MyFont myFont = new MyFont(Pong2.fontSize);
+
+    public GameFrame () {
+        Pong2.debug("Set Frame Focusable false...");
+        setBackground(Color.BLACK);
+        setSize(Pong2.appwidth+Pong2.playerXPos-5, Pong2.appheight);
+    }
+
+    public void paintComponent (Graphics g) {
+        super.paintComponent(g);
+        g.setColor(Color.WHITE);
+    }
+
+    protected void drawText (Graphics g, String text, int fontSize, int ypos) {
+        //g.setFont(myFont.setSize(fontSize)); ToDo: funktioniert so nicht
+        g.setFont(new MyFont(fontSize));
+        int xpos = Pong2.appwidth/2-(text.length()/4)*fontSize;
+        g.drawString(text, xpos, ypos);
+    }
+    
+    protected void drawText (Graphics g, String text, int fontSize, int xpos, int ypos) {
+        //g.setFont(myFont.setSize(fontSize));   ToDo: funktioniert so nicht
+        g.setFont(new MyFont(fontSize));
+        g.drawString(text, xpos, ypos);
+    }
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di735420309662464222" cid="C006" type="class" name="MainFrame" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 15:40:26">
+            <style class="default" />
+            <attributes>
+              <attribute id="aea33e9c5c35f4f03bbc96749b1195123971" cid="AT028" name="showState" type="Integer" type-id="Uml.Integer" visibility="private" default-value="1">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6be690d69ae14e41b6e62697e53e0271626" cid="AT029" name="startPanel" type="StartPanel" type-id="StartPanel" visibility="private" default-value="new StartPanel()">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad2fb89b17a9c4bf7bcfe027ef0067391194" cid="AT030" name="endPanel" type="EndPanel" type-id="Class:di538951929379176295" visibility="private" default-value="new EndPanel()">
+                <style class="default" />
+              </attribute>
+              <attribute id="a07dd55f9c4364ec198dcef6ed55af4cf360" cid="AT031" name="pongPanel" type="PongPanel" type-id="PongPanel" visibility="private" default-value="new PongPanel()">
+                <style class="default" />
+              </attribute>
+              <attribute id="af37af7cb109e4ff2af58738750fb8b57760" cid="AT032" name="layout" type="CardLayout" type-id="CardLayout" visibility="private" default-value="new CardLayout()">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4ccda65568484d8293aeed2a74b74296315" cid="AT033" name="cardPanel" type="JPanel" type-id="JPanel" visibility="private" default-value="new JPanel(layout)">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6c40dc964636471984ab1cb84cfe5fbc769" cid="AT060" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o0820c124124341f69b6b394e4e8f9c34218" cid="OP017" name="getPongPanel" type="PongPanel" type-id="PongPanel" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript">    j</source-code>
+                  <source-code language="Java">        return pongPanel;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o324cce1b1a5e4d67950646a21119f8f4720" cid="OP018" name="gotoNextLayout" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        // state machine
+        Pong2.debug("nextLayout..."+Integer.toString(showState));
+        startPanel.stop();
+        endPanel.stop();
+        pongPanel.stop();
+        switch (showState) {
+            case 0:  // start 
+                layout.show(cardPanel, "Start Pong II");
+                startPanel.start();
+                showState = 1;
+                break;
+            case 1: // game
+                layout.show(cardPanel, "Playing Pong II");
+                pongPanel.start();
+                showState = 2;
+                break;
+            case 2: // end
+                layout.show(cardPanel, "Pong II - Game Over!");
+                endPanel.start();
+                showState = 0;
+                break;
+            default: 
+                showState = 0;
+                break;
+            }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o64bf3d87575740a8a2ae322589e30f09463" cid="OP049" name="MainFrame" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug(Pong2.appname);
+        //super (Pong2.appname);
+        Pong2.debug("Start mainfram...");
+        setSize(Pong2.appwidth+Pong2.playerXPos-5, Pong2.appheight+53);
+
+        getContentPane().add(startPanel, BorderLayout.CENTER);
+        getContentPane().add(pongPanel, BorderLayout.CENTER);
+        getContentPane().add(endPanel, BorderLayout.CENTER);
+
+        cardPanel.add(startPanel, "Start Pong II");
+        cardPanel.add(pongPanel, "Playing Pong II");
+        cardPanel.add(endPanel, "Pong II - Game Over!");
+
+        add(cardPanel);
+        Pong2.debug("Card ok.");
+
+        pongPanel.setFocusable(false);
+        cardPanel.setFocusable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript">    </source-code>
+              <source-code language="Java">public class MainFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private int showState = 1;
+
+    private StartPanel startPanel = new StartPanel();
+    private EndPanel   endPanel   = new EndPanel();
+    private PongPanel  pongPanel  = new PongPanel();
+    
+    private CardLayout layout = new CardLayout();
+    private JPanel cardPanel  = new JPanel(layout);
+
+    public PongPanel getPongPanel() {
+        return pongPanel;
+    }
+
+    public MainFrame () {
+        Pong2.debug(Pong2.appname);
+        //super (Pong2.appname);
+        Pong2.debug("Start mainfram...");
+        setSize(Pong2.appwidth+Pong2.playerXPos-5, Pong2.appheight+53);
+
+        getContentPane().add(startPanel, BorderLayout.CENTER);
+        getContentPane().add(pongPanel, BorderLayout.CENTER);
+        getContentPane().add(endPanel, BorderLayout.CENTER);
+
+        cardPanel.add(startPanel, "Start Pong II");
+        cardPanel.add(pongPanel, "Playing Pong II");
+        cardPanel.add(endPanel, "Pong II - Game Over!");
+
+        add(cardPanel);
+        Pong2.debug("Card ok.");
+
+        pongPanel.setFocusable(false);
+        cardPanel.setFocusable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public void gotoNextLayout() {
+        // state machine
+        Pong2.debug("nextLayout..."+Integer.toString(showState));
+        startPanel.stop();
+        endPanel.stop();
+        pongPanel.stop();
+        switch (showState) {
+            case 0:  // start 
+                layout.show(cardPanel, "Start Pong II");
+                startPanel.start();
+                showState = 1;
+                break;
+            case 1: // game
+                layout.show(cardPanel, "Playing Pong II");
+                pongPanel.start();
+                showState = 2;
+                break;
+            case 2: // end
+                layout.show(cardPanel, "Pong II - Game Over!");
+                endPanel.start();
+                showState = 0;
+                break;
+            default: 
+                showState = 0;
+                break;
+            }
+    }
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di637623555272275168" cid="C007" type="class" name="MyFont" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 15:47:17">
+            <style class="default" />
+            <attributes>
+              <attribute id="aab49b80d1f844e2cadb07a34e4cd321d635" cid="AT062" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o71edf61306b5442199d6fe12f321dc93845" cid="OP019" name="setSize" type="MyFont" type-id="MyFont" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript">        deriveFont(size);
+        return this;</source-code>
+                  <source-code language="Java">        deriveFont(size);
+        return this;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="ob63e1a39a9584706b19c8410598c13f2740" cid="OP051" name="MyFont" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        super(Font.DIALOG, Font.BOLD, defaultSize); // set default size</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class MyFont extends Font {
+
+    private static final long serialVersionUID = 1L;
+
+    public MyFont (int defaultSize) {
+        super(Font.DIALOG, Font.BOLD, defaultSize); // set default size
+    }
+
+    public MyFont setSize (int size) {
+        deriveFont(size);
+        return this;
+    }
+
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di968086801477803464" cid="C008" type="class" name="Pad" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 15:49:26">
+            <style class="default" />
+            <attributes>
+              <attribute id="aee927345213541d989df05d129d06ecf456" cid="AT034" name="playerX" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a299fc55f490b47349511504259db6482145" cid="AT035" name="playerY" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a5be072b103e144cf81f0fa1702765c38132" cid="AT036" name="playerWidth" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae0ea1dfcf6d64a378165c2e71eb07e4f153" cid="AT037" name="playerHeight" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="af1686dec27ce451abdf638ea6fedc6eb909" cid="AT038" name="paddleSpeed" type="Integer" type-id="Uml.Integer" visibility="private" default-value="5">
+                <style class="default" />
+              </attribute>
+              <attribute id="abf824707572348fda658ef4cd40f6f7e165" cid="AT039" name="moveDownOffset" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="af5af76c6453944f7bde31a1b2ebff69f631" cid="AT040" name="no" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6919d890fbe54c468534769b4397757350" cid="AT041" name="myGoalLine" type="VLine" type-id="VLine" visibility="private" default-value="null">
+                <style class="default" />
+              </attribute>
+              <attribute id="a3b465f4cbeea45888fce805d887b73bd978" cid="AT042" name="lastMoveUp" type="Boolean" type-id="Uml.Boolean" visibility="private" default-value="true">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o1c5e307414544ce3979276c41d089f57861" cid="OP020" name="reset" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       playerY = Pong2.appheight / 2;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o615f80cbef154188bc135b640afd5c02580" cid="OP021" name="getLastMove" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       if (lastMoveUp) return 1;
+       return -1;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="od5e94366891c4b2ebf88bde516b1bd4e834" cid="OP022" name="moveUp" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       if (playerY - paddleSpeed &gt; 0) {
+           playerY -= paddleSpeed;
+           lastMoveUp = true;
+       }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="odfe691bf7227491d809154e7a8739588851" cid="OP023" name="moveDown" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       if (playerY + moveDownOffset &lt; Pong2.appheight) {
+           playerY += paddleSpeed;
+           lastMoveUp = false;
+       }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="ob6a5ca46ecaf4490ae3f16f5a09e5048483" cid="OP024" name="getBallSide" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       if (no == 1)
+           return playerX + playerWidth;
+       return playerX;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="of147731b41284a0f939fb267546b43a0628" cid="OP025" name="getTopPos" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       return playerY;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="ob117c90c4c28488584cd0a94adf9ecdc577" cid="OP026" name="getBottomPos" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       return playerY + playerHeight;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="offeae9a707f74a48b4da9e87f7bf8854517" cid="OP027" name="draw" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pcdf91aa772d44d8f910fdbc6d406c5dc" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       myGoalLine.draw(g);
+       g.fillRect(playerX, playerY, playerWidth, playerHeight);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o9a41c5910f01439e99d695eaff31f204428" cid="OP052" name="Pad" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pbbf29708f4fa41139710d34c3f7143ba" name="setNo" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       playerWidth  = Pong2.paddleSize;
+       playerHeight = Pong2.playerSize;
+       paddleSpeed  = Pong2.paddleSpeed;
+       moveDownOffset = paddleSpeed + playerHeight;
+       no = setNo;
+       if (no == 1) { // left side
+           playerX = Pong2.playerXPos;  // player 1 on left side
+           myGoalLine = new VLine(playerX - 5);
+       } else {
+           no = 2;    // right side
+           playerX = Pong2.appwidth - Pong2.playerXPos - Pong2.paddleSize; // player 2 on right side
+           myGoalLine = new VLine(playerX + playerWidth + 4);
+       }
+       reset();</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class Pad {
+
+   private int playerX = 0;  // the left side of the pad
+   private int playerY = 0;
+
+   private int playerWidth    = 0;
+   private int playerHeight   = 0;
+   private int paddleSpeed    = 5;
+   private int moveDownOffset = 0;
+   
+   private int no;
+   
+   private VLine myGoalLine   = null;
+   private boolean lastMoveUp = true;
+
+   public Pad (int setNo) {
+       playerWidth  = Pong2.paddleSize;
+       playerHeight = Pong2.playerSize;
+       paddleSpeed  = Pong2.paddleSpeed;
+       moveDownOffset = paddleSpeed + playerHeight;
+       no = setNo;
+       if (no == 1) { // left side
+           playerX = Pong2.playerXPos;  // player 1 on left side
+           myGoalLine = new VLine(playerX - 5);
+       } else {
+           no = 2;    // right side
+           playerX = Pong2.appwidth - Pong2.playerXPos - Pong2.paddleSize; // player 2 on right side
+           myGoalLine = new VLine(playerX + playerWidth + 4);
+       }
+       reset();
+   }
+   
+   public void reset () {
+       playerY = Pong2.appheight / 2;
+   }
+   
+   public int getLastMove() {
+       if (lastMoveUp) return 1;
+       return -1;
+   }
+       
+   public void moveUp() {
+       if (playerY - paddleSpeed &gt; 0) {
+           playerY -= paddleSpeed;
+           lastMoveUp = true;
+       }
+   }
+
+   public void moveDown() {
+       if (playerY + moveDownOffset &lt; Pong2.appheight) {
+           playerY += paddleSpeed;
+           lastMoveUp = false;
+       }
+   }
+
+   public int getBallSide() {
+       if (no == 1)
+           return playerX + playerWidth;
+       return playerX;
+   }
+
+   public int getTopPos() {
+       return playerY;
+   }
+
+   public int getBottomPos() {
+       return playerY + playerHeight;
+   }
+
+   public void draw(Graphics g) {
+       myGoalLine.draw(g);
+       g.fillRect(playerX, playerY, playerWidth, playerHeight);
+   }
+}</source-code>
+            </source-codes>
+          </item>
+          <item id="di373037908495873277" cid="C009" type="class" name="Player" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 15:56:40">
+            <style class="default" />
+            <attributes>
+              <attribute id="a4f4d0e5f6f344dd7a9a23b9edfbe9b0e3" cid="AT043" name="upPressed" type="Boolean" type-id="Uml.Boolean" visibility="private" static="true" default-value="false">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad481c3ed65f948f0b3c3b8da1d918cb4249" cid="AT044" name="downPressed" type="Boolean" type-id="Uml.Boolean" visibility="private" static="true" default-value="false">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8179cb76c23042e788e78a58f0161a9a989" cid="AT045" name="wPressed" type="Boolean" type-id="Uml.Boolean" visibility="private" static="true" default-value="false">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab3fffa50454f4e52badfaec38984ede7347" cid="AT046" name="sPressed" type="Boolean" type-id="Uml.Boolean" visibility="private" static="true" default-value="false">
+                <style class="default" />
+              </attribute>
+              <attribute id="aea8c72f46b1e4c1da9f99cd122fc7f13513" cid="AT047" name="no" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a45d7d528457e4296b3694944a7504ffe51" cid="AT048" name="myScore" type="Score" type-id="Score" visibility="private" default-value="null">
+                <style class="default" />
+              </attribute>
+              <attribute id="a06687881a2ea40489931fc77eb6508df557" cid="AT049" name="myPad" type="Pad" type-id="Class:di968086801477803464" visibility="private" default-value="null">
+                <style class="default" />
+              </attribute>
+              <attribute id="a62dba221b1224d7eb7d1ba11b59e1116390" cid="AT063" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o996bc71d9a084f82918e2e29197d95c3702" cid="OP028" name="stop" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       setFocusable(false);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="ofd010612a8784365a72ae59aa5e834be580" cid="OP029" name="reset" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       myScore.reset();
+       myPad.reset();
+       upPressed   = false;
+       downPressed = false;
+       wPressed    = false;
+       sPressed    = false;
+//       setFocusable(true);
+//       requestFocus();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o8eef281f66594a4cad6f43667d45b03d241" cid="OP030" name="move" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       boolean up = upPressed;
+       if (no == 1) up = wPressed;
+       if (up) {
+           myPad.moveUp();
+       }
+       boolean down = downPressed;
+       if (no == 1) down = sPressed; 
+       if (down) {
+           myPad.moveDown();
+       }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o665e25cc0d5d4da6a7456d243d552077367" cid="OP031" name="drawPlayerScore" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pf2e0aebf68454e9fb4b497c5f7a76fd3" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        if (!(myScore == null))
+            myScore.show(g);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o326e209dfc9e45dda458c00ce128898f235" cid="OP032" name="getScore" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        if (myScore == null) return 0;
+        return myScore.getScore();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="od8f7ed48212c48ee9a550894a2b13b09837" cid="OP033" name="incPlayerScore" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        if (!(myScore == null)) {
+            return myScore.incPlayerScore();
+        }
+        return false;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o7056adb99e0643b3b157c11e81c16bf4515" cid="OP034" name="draw" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pbac8e4a0c6964ef3b5a90bd5c4e39c4b" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        myPad.draw(g);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o487fdd19011043e789d7b929a8b28b7f285" cid="OP035" name="getPad" type="Pad" type-id="Class:di968086801477803464" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        return myPad;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="odf0c66523f9c4511a926a478174e7c66797" cid="OP036" name="keyPressed" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p199983bb52354c6cb086a21a234378de" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       Pong2.debug("PlayKeyPress");
+       int k = e.getKeyCode();
+       if (k == KeyEvent.VK_UP) {
+           upPressed = true;
+       }
+       else if (k == KeyEvent.VK_DOWN) {
+           downPressed = true;
+       }
+       else if (k == KeyEvent.VK_W) {
+           wPressed = true;
+       }
+       else if (k == KeyEvent.VK_S) {
+           sPressed = true;
+       }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o56df18a810d241d3a223df7f328714ce374" cid="OP037" name="keyReleased" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p59b2551bb3ee42eab1f393c5ddd3bf86" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       Pong2.debug("PlayKeyRel");
+       int k = e.getKeyCode();
+       if (k == KeyEvent.VK_UP) {
+           upPressed = false;
+       }
+       else if (k == KeyEvent.VK_DOWN) {
+           downPressed = false;
+       }
+       else if (k == KeyEvent.VK_W) {
+           wPressed = false;
+       }
+       else if (k == KeyEvent.VK_S) {
+           sPressed = false;
+       }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="obf1cf6b8542b46e3981097b0b8254d31927" cid="OP038" name="keyTyped" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pa20d6e0214b44f97a05dffe609c3e768" name="arg0" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">Pong2.debug("PlayKeyTyped");</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o8051ad03e8d04fa5bd316380bea650d4368" cid="OP053" name="Player" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p7b785d5f1890407a916ea745eb5aee96" name="jp" type="GameFrame" type-id="Class:di539795541298127387" />
+                  <parameter id="p15fb6ea6e52b47a9aab22118693147be" name="setno" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       no = setno;
+       myScore = new Score(no);
+       myPad   = new Pad(no);
+       jp.addKeyListener(this);
+       reset ();
+       stop();</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class Player extends Component implements KeyListener {
+
+   private static final long serialVersionUID = 1L;
+   private static boolean upPressed   = false;
+   private static boolean downPressed = false;
+   private static boolean wPressed    = false;
+   private static boolean sPressed    = false;
+   private int no = 0;
+   private Score myScore = null;
+   private Pad myPad     = null;
+
+   public Player (GameFrame jp, int setno) {
+       no = setno;
+       myScore = new Score(no);
+       myPad   = new Pad(no);
+       jp.addKeyListener(this);
+       reset ();
+       stop();
+   }
+
+   public void stop () {
+       setFocusable(false);
+  }
+
+   public void reset () {
+       myScore.reset();
+       myPad.reset();
+       upPressed   = false;
+       downPressed = false;
+       wPressed    = false;
+       sPressed    = false;
+//       setFocusable(true);
+//       requestFocus();
+  }
+
+   public void move () {
+       boolean up = upPressed;
+       if (no == 1) up = wPressed;
+       if (up) {
+           myPad.moveUp();
+       }
+       boolean down = downPressed;
+       if (no == 1) down = sPressed; 
+       if (down) {
+           myPad.moveDown();
+       }
+   }
+   
+    public void drawPlayerScore(Graphics g) {
+        if (!(myScore == null))
+            myScore.show(g);
+    }
+    
+    public int getScore() {
+        if (myScore == null) return 0;
+        return myScore.getScore();
+    }
+
+    public boolean incPlayerScore() {
+        if (!(myScore == null)) {
+            return myScore.incPlayerScore();
+        }
+        return false;
+    }
+
+    public void draw (Graphics g) { //draw the player
+        myPad.draw(g);
+    }
+
+    public Pad getPad () {
+        return myPad;
+    }
+
+   public void keyPressed(KeyEvent e) {
+       Pong2.debug("PlayKeyPress");
+       int k = e.getKeyCode();
+       if (k == KeyEvent.VK_UP) {
+           upPressed = true;
+       }
+       else if (k == KeyEvent.VK_DOWN) {
+           downPressed = true;
+       }
+       else if (k == KeyEvent.VK_W) {
+           wPressed = true;
+       }
+       else if (k == KeyEvent.VK_S) {
+           sPressed = true;
+       }
+    }
+
+   public void keyReleased(KeyEvent e) {
+       Pong2.debug("PlayKeyRel");
+       int k = e.getKeyCode();
+       if (k == KeyEvent.VK_UP) {
+           upPressed = false;
+       }
+       else if (k == KeyEvent.VK_DOWN) {
+           downPressed = false;
+       }
+       else if (k == KeyEvent.VK_W) {
+           wPressed = false;
+       }
+       else if (k == KeyEvent.VK_S) {
+           sPressed = false;
+       }
+   }
+    
+    @Override
+    public void keyTyped(KeyEvent arg0) {Pong2.debug("PlayKeyTyped");}
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di112763615628398535" cid="C010" type="class" name="PongPanel" style-class="" visibility="public" change-tracking-state="added" creator="Pf3ee3d8c9d8e4e23b887c0841446840d" creation-date="03/31/2016 16:02:48">
+            <style class="default" />
+            <attributes>
+              <attribute id="aeab208ff4107497cab773a552ad82fef399" cid="AT050" name="balll" type="Ball" type-id="Class:di963838408580097854" visibility="private" default-value="new Ball()">
+                <style class="default" />
+              </attribute>
+              <attribute id="a582140cc1ec64e98bac5df510a6aa065965" cid="AT051" name="centerLine" type="VLine" type-id="VLine" visibility="private" default-value="new VLine(Pong2.appwidth/2, true">
+                <style class="default" />
+              </attribute>
+              <attribute id="aee8e25ed06014b2cb83f4a6be7cfb153467" cid="AT052" name="playerR2" type="Player" type-id="Player" visibility="protected">
+                <style class="default" />
+              </attribute>
+              <attribute id="a762231481ae94b6f867cc42cb203b040861" cid="AT053" name="playerL1" type="Player" type-id="Player" visibility="protected">
+                <style class="default" />
+              </attribute>
+              <attribute id="aceb75032a230432ca5892e46433b8f2631" cid="AT054" name="timer" type="Timer" type-id="Timer" visibility="protected">
+                <style class="default" />
+              </attribute>
+              <attribute id="a07b42913ca8c47b6957c491ae078fe5d757" cid="AT061" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o434c3f73144b44c49fe763eb59a017b5259" cid="OP039" name="getPlayerR2" type="Player" type-id="Player" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript">        return playerR2;</source-code>
+                  <source-code language="Java">        return playerR2;</source-code>
+                  <source-code language="Vb6" />
+                </source-codes>
+              </operation>
+              <operation id="odfff8c7bff084048bb86e42b8496b9b3392" cid="OP040" name="getPlayerL1" type="Player" type-id="Player" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="JavaScript" />
+                  <source-code language="Java">        return playerL1;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o06aaced0ab5e45a2a7350eb6f1b2c307623" cid="OP041" name="start" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        ball.reset();
+        playerL1.reset();
+        playerR2.reset();
+        timer.start();
+         setFocusable(true);
+         requestFocus();
+//        Pong2.debug("Start Pong Listener...");
+//        playerL1.setFocusable(true);        
+//        playerR2.setFocusable(true);
+//        if (Pong2.mainFrame != null ) {
+//            Pong2.mainFrame.addKeyListener(playerL1);
+//            Pong2.mainFrame.addKeyListener(playerR2);
+//        }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="od74a6381a4ab47ccb9d3fcf16aee7fab553" cid="OP042" name="stop" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        timer.stop();
+        Pong2.debug("Stop Pong Listener...");
+        playerL1.stop();        
+        playerR2.stop();
+         setFocusable(false);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o7b8c9c6cb906415989cef1a66553e21a268" cid="OP043" name="actionPerformed" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p69c49a62e0fa491cb34cae1e00b6e6e1" name="e" type="" type-id="" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       Pong2.debug("*");
+       if (playerL1 != null) {
+           playerL1.move();
+           ball.calculateMove(getHeight());
+           if (ball.isOffLeftSide(playerL1)) {
+               if (playerR2.incPlayerScore()) {
+                   MainFrame m = Pong2.mainFrame;
+                   m.gotoNextLayout();
+               }
+           }
+       }
+       if (playerR2 != null) {
+           playerR2.move();
+           if (ball.isOffRightSide(playerR2)) {
+               if (playerL1.incPlayerScore()) {
+                   MainFrame m = Pong2.mainFrame;
+                   m.gotoNextLayout();
+               }
+           }
+       }
+       ball.move();
+       repaint(); // stuff has moved, tell this JPanel to repaint itself</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oe5cb704580a94270b685a7520460d050313" cid="OP044" name="paintComponent" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p4734da2ac3254b009ffa3f559a47f491" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       super.paintComponent(g);
+       centerLine.draw(g);
+       playerL1.drawPlayerScore(g);
+       playerR2.drawPlayerScore(g);
+       ball.draw(g);
+       playerL1.draw(g);
+       playerR2.draw(g);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oe8f957897b65458e81287926f2edffda157" cid="OP050" name="PongPanel" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       Pong2.debug("Add Pong Listeners...");
+       timer = new Timer(Pong2.gameSpeed, this); // for 1000/60: call actionPerformed() 60 fps
+       playerR2 = new Player(this,2);
+       playerL1 = new Player(this,1);
+       start();
+       stop();</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript">public class PongPanel extends GameFrame implements ActionListener {
+
+    private static final long serialVersionUID = 1L;
+    private final Ball ball = new Ball();
+    private final VLine centerLine = new VLine(Pong2.appwidth/2, true);
+    protected Player playerR2;
+    protected Player playerL1;
+    protected Timer timer;
+    
+    public Player getPlayerR2() {
+        return playerR2;
+    }
+
+    public Player getPlayerL1() {
+        return playerL1;
+    }
+    
+   public PongPanel () {
+       Pong2.debug("Add Pong Listeners...");
+       timer = new Timer(Pong2.gameSpeed, this); // for 1000/60: call actionPerformed() 60 fps
+       playerR2 = new Player(this,2);
+       playerL1 = new Player(this,1);
+       start();
+       stop();
+   }
+   
+   public void start () {
+        ball.reset();
+        playerL1.reset();
+        playerR2.reset();
+        timer.start();
+         setFocusable(true);
+         requestFocus();
+//        Pong2.debug("Start Pong Listener...");
+//        playerL1.setFocusable(true);        
+//        playerR2.setFocusable(true);
+//        if (Pong2.mainFrame != null ) {
+//            Pong2.mainFrame.addKeyListener(playerL1);
+//            Pong2.mainFrame.addKeyListener(playerR2);
+//        }
+   }
+  
+   public void stop () {
+        timer.stop();
+        Pong2.debug("Stop Pong Listener...");
+        playerL1.stop();        
+        playerR2.stop();
+         setFocusable(false);
+  }
+  
+   public void actionPerformed(ActionEvent e) {
+       Pong2.debug("*");
+       if (playerL1 != null) {
+           playerL1.move();
+           ball.calculateMove(getHeight());
+           if (ball.isOffLeftSide(playerL1)) {
+               if (playerR2.incPlayerScore()) {
+                   MainFrame m = Pong2.mainFrame;
+                   m.gotoNextLayout();
+               }
+           }
+       }
+       if (playerR2 != null) {
+           playerR2.move();
+           if (ball.isOffRightSide(playerR2)) {
+               if (playerL1.incPlayerScore()) {
+                   MainFrame m = Pong2.mainFrame;
+                   m.gotoNextLayout();
+               }
+           }
+       }
+       ball.move();
+       repaint(); // stuff has moved, tell this JPanel to repaint itself
+   }
+
+   public void paintComponent (Graphics g) {   // paint the game screen
+       super.paintComponent(g);
+       centerLine.draw(g);
+       playerL1.drawPlayerScore(g);
+       playerR2.drawPlayerScore(g);
+       ball.draw(g);
+       playerL1.draw(g);
+       playerR2.draw(g);
+   }
+}</source-code>
+              <source-code language="Java">package Pong2;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
+public class PongPanel extends GameFrame implements ActionListener {
+
+    private static final long serialVersionUID = 1L;
+    private final Ball ball = new Ball();
+    private final VLine centerLine = new VLine(Pong2.appwidth/2, true);
+    protected Player playerR2;
+    protected Player playerL1;
+    protected Timer timer;
+    
+    public Player getPlayerR2() {
+        return playerR2;
+    }
+
+    public Player getPlayerL1() {
+        return playerL1;
+    }
+    
+   public PongPanel () {
+       Pong2.debug("Add Pong Listeners...");
+       timer = new Timer(Pong2.gameSpeed, this); // for 1000/60: call actionPerformed() 60 fps
+       playerR2 = new Player(this,2);
+       playerL1 = new Player(this,1);
+       start();
+       stop();
+   }
+   
+   public void start () {
+        ball.reset();
+        playerL1.reset();
+        playerR2.reset();
+        timer.start();
+         setFocusable(true);
+         requestFocus();
+//        Pong2.debug("Start Pong Listener...");
+//        playerL1.setFocusable(true);        
+//        playerR2.setFocusable(true);
+//        if (Pong2.mainFrame != null ) {
+//            Pong2.mainFrame.addKeyListener(playerL1);
+//            Pong2.mainFrame.addKeyListener(playerR2);
+//        }
+   }
+  
+   public void stop () {
+        timer.stop();
+        Pong2.debug("Stop Pong Listener...");
+        playerL1.stop();        
+        playerR2.stop();
+         setFocusable(false);
+  }
+  
+   public void actionPerformed(ActionEvent e) {
+       Pong2.debug("*");
+       if (playerL1 != null) {
+           playerL1.move();
+           ball.calculateMove(getHeight());
+           if (ball.isOffLeftSide(playerL1)) {
+               if (playerR2.incPlayerScore()) {
+                   MainFrame m = Pong2.mainFrame;
+                   m.gotoNextLayout();
+               }
+           }
+       }
+       if (playerR2 != null) {
+           playerR2.move();
+           if (ball.isOffRightSide(playerR2)) {
+               if (playerL1.incPlayerScore()) {
+                   MainFrame m = Pong2.mainFrame;
+                   m.gotoNextLayout();
+               }
+           }
+       }
+       ball.move();
+       repaint(); // stuff has moved, tell this JPanel to repaint itself
+   }
+
+   public void paintComponent (Graphics g) {   // paint the game screen
+       super.paintComponent(g);
+       centerLine.draw(g);
+       playerL1.drawPlayerScore(g);
+       playerR2.drawPlayerScore(g);
+       ball.draw(g);
+       playerL1.draw(g);
+       playerR2.draw(g);
+   }
+}</source-code>
+            </source-codes>
+          </item>
+          <item id="di809258036532785747" cid="C011" type="class" name="Score" style-class="" visibility="public" change-tracking-state="added" creation-date="04/01/2016 14:39:32">
+            <style class="default" />
+            <attributes>
+              <attribute id="a600001e17a634f47ad563dd1ac037637583" cid="AT064" name="playerScore" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a529bac5d75aa41fabeeba93315506a38663" cid="AT065" name="scoreXPos" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2e603bafc23449b2b5de3998b6aa3eb6617" cid="AT066" name="scoreYPos" type="Integer" type-id="Uml.Integer" visibility="private" default-value="Pong2.scoreYPos">
+                <style class="default" />
+              </attribute>
+              <attribute id="ae47fb9460fac46a0b62752fbd00d4d3e757" cid="AT067" name="scoreFontSize" type="Integer" type-id="Uml.Integer" visibility="private" default-value="Pong2.scoreFontSize">
+                <style class="default" />
+              </attribute>
+              <attribute id="a523d29af18a94779b5993fa48f97cf8b917" cid="AT068" name="myFont" type="Font" type-id="Font" visibility="private" default-value="null">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o3b696a729f5f4b2b805d1869adc617c1783" cid="OP054" name="Score" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p541e67b6884e42cc9590c27eaf5bbcf9" name="no" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        scoreXPos = Pong2.scoreXPos;
+        if ( no == 2 ) scoreXPos = Pong2.appwidth - Pong2.scoreXPos;
+        myFont = new Font( Font.DIALOG, Font.BOLD, scoreFontSize );
+        reset();</source-code>
+                  <source-code language="Cpp" />
+                </source-codes>
+              </operation>
+              <operation id="o411730dd5a2f4c08aa1ea2a2b4e4f167665" cid="OP055" name="reset" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        playerScore = 0;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o1c545c918be64e6daa9562104495b0ac703" cid="OP056" name="show" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p3899fae2153e4170972f2c8f9c35f286" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        g.setFont(myFont);
+        g.drawString(String.valueOf(playerScore), scoreXPos, scoreYPos);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="od5cfa7f82af347dea6bdd75b0b192289251" cid="OP057" name="getScore" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        return playerScore;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="occbcfa1fb4c744c593e744bc0e8413c1289" cid="OP058" name="incPlayerScore" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        playerScore++;
+        return playerScore &gt;= Pong2.maxPoints;</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class Score {
+
+    private int playerScore   = 0;
+    private int scoreXPos     = 0;
+    private int scoreYPos     = Pong2.scoreYPos;
+    private int scoreFontSize = Pong2.scoreFontSize;
+    Font myFont = null;
+    
+    public Score (int no) {
+        scoreXPos = Pong2.scoreXPos;
+        if ( no == 2 ) scoreXPos = Pong2.appwidth - Pong2.scoreXPos;
+        myFont = new Font( Font.DIALOG, Font.BOLD, scoreFontSize );
+        reset();
+    } 
+    
+    public void reset () {
+        playerScore = 0;
+    } 
+    
+    public void show(Graphics g) {
+        g.setFont(myFont);
+        g.drawString(String.valueOf(playerScore), scoreXPos, scoreYPos);
+    }
+
+    public int getScore() {
+        return playerScore;
+    }
+
+    public boolean incPlayerScore() {
+        playerScore++;
+        return playerScore &gt;= Pong2.maxPoints;
+    }
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di660839885508403093" cid="C013" type="class" name="StartPanel" style-class="" visibility="public" change-tracking-state="added" creation-date="04/01/2016 14:53:15">
+            <style class="default" />
+            <attributes>
+              <attribute id="a347a09571c33469f9257e2441e951e70610" cid="AT069" name="serialVersionUID" type="long" type-id="long" visibility="private" static="true" default-value="1L">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o5caf0e445514421491682382cba694ef2" cid="OP059" name="StartPanel" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug("Init Start Listener...");
+        addKeyListener(this);
+        setBackground(Color.GREEN);
+        start();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o8e9f90a811264e3b95df12ce54970983561" cid="OP060" name="start" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug("Set Start focusable true...");
+        setFocusable(true);            // listen to key presses
+        requestFocus();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o67edcaf079df423cbad55f6828363b48102" cid="OP061" name="stop" type="" type-id="" visibility="public">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug("Stop Start focusable...");
+        setFocusable(false);            // listen to key presses</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o63d2393ea1894a30a9d41d4395dc221c784" cid="OP062" name="paintComponent" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p104d425aa1284b96a1a79eb1e07c5a2e" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">       super.paintComponent(g);
+       // ToDo: evtl. erste Lsg. überflüssig (testen)
+       drawText (g, " "+Pong2.appname, Pong2.scoreFontSize, Pong2.appwidth/2-2*Pong2.scoreFontSize, Pong2.appheight/3+25);
+       drawText (g, "Press 'P' to play.", Pong2.fontSize,   Pong2.appheight-100);</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o9d8f1894352b435995d84a1808c41de0720" cid="OP063" name="keyPressed" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p6aa720674e474e6c850e2b9653f74cc7" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        Pong2.debug("StartKeyPPress");
+          if (e.getKeyCode() == KeyEvent.VK_P) {
+            MainFrame m = Pong2.mainFrame;
+            setFocusable(false);
+            m.gotoNextLayout();
+        }</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oea748d4de8024ffbbb7a8bf93ae0d7cc71" cid="OP064" name="keyReleased" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p3a62b7b8f43a495bbd982086b610c8b2" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">e.getKeyCode();</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oa6852069b81544e6a70a989544e150c3642" cid="OP065" name="keyTyped" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p9d62d763cb85436cbf4a4b018a6101de" name="e" type="KeyEvent" type-id="KeyEvent" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">e.getKeyCode();</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class StartPanel extends GameFrame implements KeyListener {
+
+    private static final long serialVersionUID = 1L;
+    
+    public StartPanel () {
+        Pong2.debug("Init Start Listener...");
+        addKeyListener(this);
+        setBackground(Color.GREEN);
+        start();
+    }
+
+    public void start () {
+        Pong2.debug("Set Start focusable true...");
+        setFocusable(true);            // listen to key presses
+        requestFocus();
+    }
+    
+
+    public void stop () {
+        Pong2.debug("Stop Start focusable...");
+        setFocusable(false);            // listen to key presses
+    }
+    
+   public void paintComponent (Graphics g) {
+       super.paintComponent(g);
+       // ToDo: evtl. erste Lsg. überflüssig (testen)
+       drawText (g, " "+Pong2.appname, Pong2.scoreFontSize, Pong2.appwidth/2-2*Pong2.scoreFontSize, Pong2.appheight/3+25);
+       drawText (g, "Press 'P' to play.", Pong2.fontSize,   Pong2.appheight-100);
+   }
+   
+    public void keyPressed(KeyEvent e) {
+        Pong2.debug("StartKeyPPress");
+          if (e.getKeyCode() == KeyEvent.VK_P) {
+            MainFrame m = Pong2.mainFrame;
+            setFocusable(false);
+            m.gotoNextLayout();
+        }
+      }
+
+     public void keyReleased(KeyEvent e) {e.getKeyCode();};
+     public void keyTyped(KeyEvent e) {e.getKeyCode();};
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di717415527184861626" cid="C015" type="class" name="VLine" style-class="" visibility="public" change-tracking-state="added" creation-date="04/01/2016 15:09:22">
+            <style class="default" />
+            <attributes>
+              <attribute id="a92415d0b25fc4116bedf6adfc72f110a404" cid="AT070" name="xPos" type="Integer" type-id="Uml.Integer" visibility="private" default-value="0">
+                <style class="default" />
+              </attribute>
+              <attribute id="a03e053323285449ab67a84963d23f12e356" cid="AT071" name="dashSize" type="Integer" type-id="Uml.Integer" visibility="private" default-value="25">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8b213dff830b4cf1ab2928da07f87be9202" cid="AT072" name="isDashed" type="Boolean" type-id="Uml.Boolean" visibility="private" default-value="false">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o21d47ec5f161480f9122a72e0dd3dc3c798" cid="OP066" name="VLine" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p49d0d2e7c8bb43aa90f4c6f61695c45d" name="setXPos" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        xPos = setXPos;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="oc3a76aa249bd409882c0069dfc851123681" cid="OP067" name="VLine" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p5716da86370b4736932eb2466af7c2c9" name="setXPos" type="Integer" type-id="Uml.Integer" />
+                  <parameter id="p080b43e07c6f47a99e2094c8ec69e782" name="setDashed" type="Boolean" type-id="Uml.Boolean" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        isDashed = setDashed;
+        xPos = setXPos;</source-code>
+                </source-codes>
+              </operation>
+              <operation id="o6cf701f6a0094b809f25372110de5471296" cid="OP068" name="draw" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p7a72d78bb8ff4c1fa71315b7bc6b3616" name="g" type="Graphics" type-id="Graphics" />
+                </parameters>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                  <source-code language="Java">        if (isDashed) {
+            int step = dashSize * 2;
+            for (int lineY = 0; lineY &lt; Pong2.appheight; lineY += step) {
+                g.drawLine (xPos, lineY, xPos, lineY + dashSize);
+            }
+        } else {
+            g.drawLine (xPos, 0, xPos, Pong2.appheight);
+        }</source-code>
+                </source-codes>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+              <source-code language="Java">public class VLine {
+    
+    private int xPos = 0;
+    private int dashSize = 25;
+    private boolean isDashed = false;
+    
+    public VLine (int setXPos) {
+        xPos = setXPos;
+    }
+
+    public VLine (int setXPos, boolean setDashed) {
+        isDashed = setDashed;
+        xPos = setXPos;
+    }
+
+    public void draw (Graphics g) {
+        if (isDashed) {
+            int step = dashSize * 2;
+            for (int lineY = 0; lineY &lt; Pong2.appheight; lineY += step) {
+                g.drawLine (xPos, lineY, xPos, lineY + dashSize);
+            }
+        } else {
+            g.drawLine (xPos, 0, xPos, Pong2.appheight);
+        }
+    }
+
+}
+</source-code>
+            </source-codes>
+          </item>
+          <item id="di649379851109626341" cid="REL002" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 12:57:46" from="di539795541298127387" to="di649379851109626341">
+            <style class="default" />
+            <relation from="di539795541298127387" to="di649379851109626341">
+              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di934463371169465336" cid="GNR011" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:12:19" from="di112763615628398535" to="di539795541298127387">
+            <style class="default" />
+          </item>
+          <item id="di835556614184358156" cid="C012" type="class" name="KeyListener" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 12:59:54">
+            <style class="default" />
+          </item>
+          <item id="di193832750260428099" cid="GNR007" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:11:31" to="di539795541298127387">
+            <style class="default" />
+          </item>
+          <item id="di994523110434597552" cid="C014" type="class" name="JPanel" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:02:23">
+            <style class="default" />
+          </item>
+          <item id="di499094686845514935" cid="GNR002" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:02:39" from="di539795541298127387" to="di994523110434597552">
+            <style class="default" />
+          </item>
+          <item id="di440428729917459672" cid="C016" type="class" name="JFrame" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:08:05">
+            <style class="default" />
+          </item>
+          <item id="di788233967650960207" cid="GNR005" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:08:34" from="di735420309662464222" to="di440428729917459672">
+            <style class="default" />
+          </item>
+          <item id="di234884766798492625" cid="GNR015" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:17:40" to="di539795541298127387">
+            <style class="default" />
+          </item>
+          <item id="di934027988604317896" cid="REA008" type="realization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:13:03" to="di835556614184358156">
+            <style class="default" />
+          </item>
+          <item id="di262704755590393174" cid="REA011" type="realization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:15:35" from="di112763615628398535" to="di615550276485279118">
+            <style class="default" />
+          </item>
+          <item id="di563182000277415474" cid="REA010" type="realization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:13:14" from="di538951929379176295" to="di835556614184358156">
+            <style class="default" />
+          </item>
+          <item id="di615550276485279118" cid="C012" type="class" name="ActionListener" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 12:59:54">
+            <style class="default" />
+          </item>
+          <item id="di104222394841937326" cid="C016" type="class" name="Font" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:08:05">
+            <style class="default" />
+          </item>
+          <item id="di182097357437693578" cid="GNR016" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:17:58" from="di637623555272275168" to="di104222394841937326">
+            <style class="default" />
+          </item>
+          <item id="di805265131511915421" cid="C016" type="class" name="Components" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:08:05">
+            <style class="default" />
+          </item>
+          <item id="di577263091842096419" cid="GNR017" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:23:51" from="di373037908495873277" to="di805265131511915421">
+            <style class="default" />
+          </item>
+          <item id="di777689937470689584" cid="REA012" type="realization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="04/05/2016 13:24:05" from="di373037908495873277" to="di835556614184358156">
+            <style class="default" />
+          </item>
+        </abstract-items>
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di930439902475311953" iid="fa3f29a0236d40fdaf33ed463c8d0772" creation-date="03/31/2016 13:57:09" order-index="0" type="entity">
+            <layout ax="-764" ay="271" awidth="284" aheight="389" x="-764" y="271" width="284" height="389" />
+            <class />
+          </item>
+          <item id="di963838408580097854" iid="abc44cf55b3f4cb592f3235692840f3d" creation-date="03/31/2016 14:12:25" order-index="1" type="entity">
+            <layout ax="-464" ay="288" awidth="253" aheight="355" x="-464" y="288" width="253" height="355" />
+            <class />
+          </item>
+          <item id="di538951929379176295" iid="9cd8d238610545668d3f00e4fa47e0d5" creation-date="03/31/2016 14:50:39" order-index="2" type="entity">
+            <layout ax="713" ay="388" awidth="215" aheight="185" x="713" y="388" width="215" height="185" />
+            <class />
+          </item>
+          <item id="di539795541298127387" iid="752003449dcd4d739cb9fa5aa29d554e" creation-date="03/31/2016 14:58:08" order-index="3" type="entity">
+            <layout ax="349" ay="-127.5" awidth="321" aheight="162" x="349" y="-127.5" width="321" height="162" />
+            <class />
+          </item>
+          <item id="di735420309662464222" iid="98d2fa132aab40b1aef43423e0d7e96b" creation-date="03/31/2016 15:40:26" order-index="4" type="entity">
+            <layout ax="-774" ay="-290.5" awidth="278" aheight="219" x="-774" y="-290.5" width="278" height="219" />
+            <class />
+          </item>
+          <item id="di637623555272275168" iid="47365c940ed94c8e985f933daa0a29cb" creation-date="03/31/2016 15:47:17" order-index="5" type="entity">
+            <layout ax="-373.5" ay="-302" awidth="190" aheight="100" x="-373.5" y="-302" width="190" height="100" />
+            <class />
+          </item>
+          <item id="di968086801477803464" iid="0eddfd8303d5415ab2d334d53abacaff" creation-date="03/31/2016 15:49:26" order-index="6" type="entity">
+            <layout ax="-206" ay="279.5" awidth="211" aheight="372" x="-206" y="279.5" width="211" height="372" />
+            <class />
+          </item>
+          <item id="di373037908495873277" iid="2f99b37cc5bd4559b806ecaae0338537" creation-date="03/31/2016 15:56:40" order-index="7" type="entity">
+            <layout ax="-81" ay="-146" awidth="279" aheight="389" x="-81" y="-146" width="279" height="389" />
+            <class />
+          </item>
+          <item id="di112763615628398535" iid="0170c9f0b496432bbe83875ccaf273f8" creation-date="03/31/2016 16:02:48" order-index="8" type="entity">
+            <layout ax="361.5" ay="388" awidth="334" aheight="284" x="361.5" y="388" width="334" height="284" />
+            <class />
+          </item>
+          <item id="di809258036532785747" iid="d222618052e94bb7a8811a14143f531e" creation-date="04/01/2016 14:39:32" order-index="9" type="entity">
+            <layout ax="-774" ay="-53.5" awidth="306" aheight="219" x="-774" y="-53.5" width="306" height="219" />
+            <class />
+          </item>
+          <item id="di660839885508403093" iid="76dd322244c54b36bc6287b39c6a6b67" creation-date="04/01/2016 14:53:15" order-index="10" type="entity">
+            <layout ax="144" ay="382.5" awidth="215" aheight="185" x="144" y="382.5" width="215" height="185" />
+            <class />
+          </item>
+          <item id="di717415527184861626" iid="49cc33eb782f46f8bd2ce2b236673b38" creation-date="04/01/2016 15:09:22" order-index="11" type="entity">
+            <layout ax="-436.5" ay="-107.5" awidth="316" aheight="162" x="-436.5" y="-107.5" width="316" height="162" />
+            <class />
+          </item>
+          <item id="di649379851109626341" iid="c929ada81e874212a689512cdadadd5c" creation-date="04/05/2016 12:57:46" order-index="12" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="511" y1="34" x2="511" y2="34" start-border-pos="0.623831775700935" end-border-pos="0.5" name-position="0,0">
+              <points>
+                <point x="511" y="34" />
+                <point x="511" y="34" />
+              </points>
+            </layout>
+            <relation from="di539795541298127387" from-iid="752003449dcd4d739cb9fa5aa29d554e" to="di649379851109626341" to-iid="c929ada81e874212a689512cdadadd5c" />
+          </item>
+          <item id="di835556614184358156" iid="03cf4a725dac40cc8c36fd990cd5fbb5" creation-date="04/05/2016 12:59:54" order-index="14" type="entity">
+            <layout ax="467.75" ay="160" awidth="121.5" aheight="23" x="467.75" y="160" width="121.5" height="23" />
+            <class />
+          </item>
+          <item id="di994523110434597552" iid="963e6948f8e746639ae3b11924ccf691" creation-date="04/05/2016 13:02:23" order-index="16" type="entity">
+            <layout ax="467.75" ay="-223" awidth="81" aheight="21" x="467.75" y="-223" width="81" height="21" />
+            <class />
+          </item>
+          <item id="di499094686845514935" iid="8e41713037164818ac4d1338a46ae273" creation-date="04/05/2016 13:02:39" order-index="17" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="504" y1="-128" x2="508" y2="-202" start-border-pos="0.120716510903427" end-border-pos="0.626543209876543" name-position="0,0">
+              <points>
+                <point x="504" y="-128" />
+                <point x="508" y="-202" />
+              </points>
+            </layout>
+            <relation from="di539795541298127387" from-iid="752003449dcd4d739cb9fa5aa29d554e" to="di994523110434597552" to-iid="963e6948f8e746639ae3b11924ccf691" />
+          </item>
+          <item id="di440428729917459672" iid="131fbf0d5d0b42dfadbe8b8661a2121a" creation-date="04/05/2016 13:08:05" order-index="18" type="entity">
+            <layout ax="-680" ay="-390.25" awidth="67.5" aheight="21" x="-680" y="-390.25" width="67.5" height="21" />
+            <class />
+          </item>
+          <item id="di788233967650960207" iid="48989240c70c4dc985e3dec52113903b" creation-date="04/05/2016 13:08:34" order-index="19" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-647" y1="-290" x2="-647" y2="-369" start-border-pos="0.114208633093525" end-border-pos="0.627777777777778" name-position="0,0">
+              <points>
+                <point x="-647" y="-290" />
+                <point x="-647" y="-369" />
+              </points>
+            </layout>
+            <relation from="di735420309662464222" from-iid="98d2fa132aab40b1aef43423e0d7e96b" to="di440428729917459672" to-iid="131fbf0d5d0b42dfadbe8b8661a2121a" />
+          </item>
+          <item id="di193832750260428099" iid="c0cce5b4b99746d6a1f1a262b43cf3fb" creation-date="04/05/2016 13:11:31" order-index="20" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="true" lock-to-fields="false" auto-path="" x1="248" y1="382.5" x2="349" y2="34" start-border-pos="0.148449565089026" end-border-pos="0.75" name-position="0,0">
+              <points>
+                <point x="248" y="382.5" />
+                <point x="246" y="227" />
+                <point x="246" y="34.5" />
+                <point x="349" y="34" />
+              </points>
+            </layout>
+            <relation to="di539795541298127387" to-iid="752003449dcd4d739cb9fa5aa29d554e" />
+          </item>
+          <item id="di934463371169465336" iid="e70a9fddc62d45b590286852425b9e42" creation-date="04/05/2016 13:12:19" order-index="21" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="400" y1="388" x2="401" y2="34" start-border-pos="0.0288173652694611" end-border-pos="0.709501557632399" name-position="1,0">
+              <points>
+                <point x="400" y="388" />
+                <point x="401" y="34" />
+              </points>
+            </layout>
+            <relation from="di112763615628398535" from-iid="0170c9f0b496432bbe83875ccaf273f8" to="di539795541298127387" to-iid="752003449dcd4d739cb9fa5aa29d554e" />
+          </item>
+          <item id="di934027988604317896" iid="f88d20cc0ebe449eba7fc7a6254f38a8" creation-date="04/05/2016 13:13:03" order-index="23" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="343" y1="382.5" x2="468" y2="173" start-border-pos="0.241860465116279" end-border-pos="0.861413043478261" name-position="0,0">
+              <points>
+                <point x="343" y="382.5" />
+                <point x="346" y="175" />
+                <point x="468" y="173" />
+              </points>
+            </layout>
+            <relation to="di835556614184358156" to-iid="03cf4a725dac40cc8c36fd990cd5fbb5" />
+          </item>
+          <item id="di563182000277415474" iid="16a3d7db9d014e84897c82126e775328" creation-date="04/05/2016 13:13:14" order-index="25" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="722" y1="388" x2="589" y2="173" start-border-pos="0.0104651162790698" end-border-pos="0.394021739130435" name-position="53,-32">
+              <points>
+                <point x="722" y="388" />
+                <point x="723" y="176" />
+                <point x="589" y="173" />
+              </points>
+            </layout>
+            <relation from="di538951929379176295" from-iid="9cd8d238610545668d3f00e4fa47e0d5" to="di835556614184358156" to-iid="03cf4a725dac40cc8c36fd990cd5fbb5" />
+          </item>
+          <item id="di615550276485279118" iid="76a4fc27f61a438b853d039f2075394a" creation-date="04/05/2016 12:59:54" order-index="14" type="entity">
+            <layout ax="445.5" ay="320" awidth="128" aheight="21" x="445.5" y="320" width="128" height="21" />
+            <class />
+          </item>
+          <item id="di262704755590393174" iid="93bdbfd830164df5845b7cab4bdfffb4" creation-date="04/05/2016 13:15:35" order-index="26" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="true" lock-to-fields="false" auto-path="" x1="523" y1="388" x2="521" y2="341" start-border-pos="0.120689163664858" end-border-pos="0.6025390625" name-position="0,0">
+              <points>
+                <point x="523" y="388" />
+                <point x="521" y="341" />
+              </points>
+            </layout>
+            <relation from="di112763615628398535" from-iid="0170c9f0b496432bbe83875ccaf273f8" to="di615550276485279118" to-iid="76a4fc27f61a438b853d039f2075394a" />
+          </item>
+          <item id="di104222394841937326" iid="d3e4047e57ab466da1d53eee470ffad8" creation-date="04/05/2016 13:08:05" order-index="18" type="entity">
+            <layout ax="-301.5" ay="-378.5" awidth="68" aheight="21" x="-301.5" y="-378.5" width="68" height="21" />
+            <class />
+          </item>
+          <item id="di234884766798492625" iid="1ca44f6ca4414f01988e93b76a9e927e" creation-date="04/05/2016 13:17:40" order-index="27" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="802" y1="382.5" x2="653" y2="34" start-border-pos="0.072093023255814" end-border-pos="0.513239875389408" name-position="0,0">
+              <points>
+                <point x="802" y="382.5" />
+                <point x="804" y="34.5" />
+                <point x="653" y="34" />
+              </points>
+            </layout>
+            <relation to="di539795541298127387" to-iid="752003449dcd4d739cb9fa5aa29d554e" />
+          </item>
+          <item id="di182097357437693578" iid="8693a61a7faa4607984a64d576815113" creation-date="04/05/2016 13:17:58" order-index="28" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="false" lock-to-fields="false" auto-path="" x1="-270" y1="-302" x2="-268" y2="-358" start-border-pos="0.136184210526316" end-border-pos="0.628063762889189" name-position="0,0">
+              <points>
+                <point x="-270" y="-302" />
+                <point x="-268" y="-358" />
+              </points>
+            </layout>
+            <relation from="di637623555272275168" from-iid="47365c940ed94c8e985f933daa0a29cb" to="di104222394841937326" to-iid="d3e4047e57ab466da1d53eee470ffad8" />
+          </item>
+          <item id="di805265131511915421" iid="2af0bb723dff4a9e92e4baf10971017d" creation-date="04/05/2016 13:08:05" order-index="18" type="entity">
+            <layout ax="5" ay="-379.75" awidth="107" aheight="21" x="5" y="-379.75" width="107" height="21" />
+            <class />
+          </item>
+          <item id="di577263091842096419" iid="c079438814a448258e549019124983d0" creation-date="04/05/2016 13:23:51" order-index="29" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="58" y1="-146" x2="58" y2="-359" start-border-pos="0.12410394265233" end-border-pos="0.625" name-position="0,0">
+              <points>
+                <point x="58" y="-146" />
+                <point x="58" y="-359" />
+              </points>
+            </layout>
+            <relation from="di373037908495873277" from-iid="2f99b37cc5bd4559b806ecaae0338537" to="di805265131511915421" to-iid="2af0bb723dff4a9e92e4baf10971017d" />
+          </item>
+          <item id="di777689937470689584" iid="1d8f1e6fd50c433d9042eaac471f7bee" creation-date="04/05/2016 13:24:05" order-index="30" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="142" y1="-146" x2="503" y2="183" start-border-pos="0.200268817204301" end-border-pos="0.677469135802469" name-position="0,0">
+              <points>
+                <point x="142" y="-146" />
+                <point x="144" y="-202" />
+                <point x="237" y="-202" />
+                <point x="275" y="-202" />
+                <point x="266" y="229" />
+                <point x="504" y="231" />
+                <point x="503" y="183" />
+              </points>
+            </layout>
+            <relation from="di373037908495873277" from-iid="2f99b37cc5bd4559b806ecaae0338537" to="di835556614184358156" to-iid="03cf4a725dac40cc8c36fd990cd5fbb5" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+  <documents />
+  <document-templates />
+</sim-project>
