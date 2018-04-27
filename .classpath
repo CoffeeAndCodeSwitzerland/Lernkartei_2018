@@ -9,5 +9,7 @@
 	<classpathentry kind="lib" path="core.jar"/>
 	<classpathentry kind="lib" path="src/GUIDesign/G4P.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="src/database/sqlite-jdbc-3.8.11.2.jar"/>
+	<classpathentry kind="lib" path="src/database/mysql-connector-java-5.1.42-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
