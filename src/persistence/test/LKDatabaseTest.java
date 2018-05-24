@@ -125,24 +125,25 @@ public class LKDatabaseTest {
 		Environment.debug();  // just show environment var's
 		clearDBTest();
 
-		debug.Debugger.out("Test Insert Doors...");
-		Attribute[] attrs = {new Attribute("Name","hallo!!!")};
-		createNewEntryTest("Door", attrs);
+		debug.Debugger.out("Test Insert values into Doors (1 line/entry)...");
+		Attribute[] newAttrs = {new Attribute("Name","hallo!!!")}; // only changing values
+		String tabName = "Door";
+		createNewEntryTest(tabName, newAttrs);
 
-		debug.Debugger.out("Test reading Doors...");
+		debug.Debugger.out("Test reading Door data...");
 		ArrayList<String> aList = e.getDataList("SELECT * FROM Door");
 		// check results for reading data:
 		cmd = e.getMyDBDriver().getLastSQLCommand();
 		debug.Debugger.out("DATA: {" + cmd + "}");
-		assertEquals("SELECT * FROM Door",cmd);
+		assertEquals("SELECT * FROM Door",cmd);	// check SQL command and result-flag
 		assertEquals(false, e.getMyDBDriver().isThereAResult()); // no more data is ok after get
 
-		aList = e.getDataList("SELECT Name FROM Door"); // do it again
+		aList = e.getDataList("SELECT Name FROM Door"); // read again...
 		// check results for reading data:
-		debug.Debugger.out("SQL: {"+aList.get(0)+"}");
+		debug.Debugger.out("SQL: {"+aList.get(0)+"}"); // check cursor read
 		assertEquals("hallo!!!",aList.get(0));
 
-		debug.Debugger.out("Test Insert Doors after reading...");
+		debug.Debugger.out("Test Insert values into Doors after reading...");
 		Attribute[] attrs2 = {new Attribute("Name","hallo2")};
 		createNewEntryTest("Door", attrs2);
 
@@ -152,7 +153,7 @@ public class LKDatabaseTest {
 		assertEquals(true,Integer.parseInt(PK_ID) > 0);// ID wechselt immer, solange kein DROP TABLE, evtl. mit MIN(ID) herausfindbar
 		e.getMyDBDriver().closeDB();
 	
-		debug.Debugger.out("Test Insert Users...");
+		debug.Debugger.out("Test Insert values into User (for 2 users)...");
 		Attribute[] attrs3 = {new Attribute("Username","local"), new Attribute("Email","user1@mail.ch")};
 		createNewEntryTest("User", attrs3);
 		Attribute[] attrs4 = {new Attribute("Username","global"), new Attribute("Email","user2@mail.ch")};
@@ -160,7 +161,7 @@ public class LKDatabaseTest {
 		
 		debug.Debugger.out("Test Get Door Ref...");
 		e = dataBaseModel.getMyTables().get("Door");
-		String door_id = e.getEntityID("name", "hallo2");
+		String door_id = e.getEntityID("name", "hallo2"); // get Door-ID where name='hallo2'
 		// check results:
 		cmd = e.getMyDBDriver().getLastSQLCommand();
 		e.getMyDBDriver().closeDB();
@@ -175,15 +176,15 @@ public class LKDatabaseTest {
 		assertNotEquals(door_id,null);
 		assertNotEquals(user_id,null);
 
-		debug.Debugger.out("Test Insert into Stacks...");
-		Attribute[] attrs6 = {new Attribute("FK_Door",door_id), 
+		debug.Debugger.out("Test Insert values into Stack...");
+		Attribute[] attrs5 = {new Attribute("FK_Door",door_id), 
 							  new Attribute("FK_User",user_id),
 							  new Attribute("Name","hh1")};
-		createNewEntryTest("Stack", attrs6);
+		createNewEntryTest("Stack", attrs5);
 
-		debug.Debugger.out("Test Cards...");
-		Attribute[] attrs5 = {new Attribute("Frontside","hallo...")};
-		createNewEntryTest("Card", attrs5);
+		debug.Debugger.out("Test Insert values into Card...");
+		Attribute[] attrs6 = {new Attribute("Frontside","hallo...")};
+		createNewEntryTest("Card", attrs6);
 
 		e.getMyDBDriver().closeDB();
 	}
