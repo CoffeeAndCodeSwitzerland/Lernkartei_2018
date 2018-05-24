@@ -27,14 +27,38 @@ public class LKDatabaseTest {
 	static int result;
 	static Entity e;
 
-	public static void cleanTableTest(String name) throws Exception {
-		e = dataBaseModel.getMyTables().get(name);
-		int res = e.delValues();
-		debug.Debugger.out("RESULT: {"+res+"}");
-		assertEquals(true,res>=0);
+	public static int cleanTable(String name) throws Exception {
+		Entity e = dataBaseModel.getMyTables().get(name);
+		return e.delValues();
+	}
+
+	public static Entity cleanTableTest(String name) throws Exception {
+
+		int result = cleanTable(name);
+
+		// check results:
+		debug.Debugger.out("RESULT: {"+result+"}");
+		assertEquals(true,result>=0);
+		Entity e = dataBaseModel.getMyTables().get(name);
 		assertEquals("PK_"+e.getMyTableName(),e.getMyAttributes().getPrimaryKey().getName());
+		return e;
+	}
+
+	public static void clearDBTest () throws Exception {
+		debug.Debugger.out("Test DB cleaning...");
+		
+		// @TODO Delete DB-file if exists
+		
+		cleanTableTest("Card");
+		cleanTableTest("Stack");
+		cleanTableTest("Door");
+		cleanTableTest("User");
+		cleanTableTest("Side");
+		cleanTableTest("Learn");
+		Entity e = cleanTableTest("Login");
 		e.getMyDBDriver().closeDB();
 	}
+	
 	
 	/**
 	 * Crate a new entry in a table
@@ -45,13 +69,13 @@ public class LKDatabaseTest {
 	 * @throws Exception
 	 */
 	public static int createNewEntry(String tableName, Attribute[] newValues) throws Exception {
-		Entity tab = dataBaseModel.getMyTables().get(tableName); // seek Table-Object
-		AttributeList tabAttributes = tab.getMyAttributes();   // get his Attributes (Objects)
+		e = dataBaseModel.getMyTables().get(tableName); // seek Table-Object
+		AttributeList tabAttributes = e.getMyAttributes();   // get his Attributes (Objects)
 		for (Attribute a : newValues) {
 			tabAttributes.getAttributeNamedAs(a.getName()).setValue(a.getValue()); // set the new values
 		}
 		cmd = SQLHandler.insertIntoTableCommand(tableName,tabAttributes); // execute the insert command
-		return tab.getMyDBDriver().executeCommand(cmd); // execute Insert Command
+		return e.getMyDBDriver().executeCommand(cmd); // execute Insert Command
 	}
 	
 	public static void createNewEntryTest(String tableName, Attribute[] newValues) throws Exception {
@@ -60,102 +84,107 @@ public class LKDatabaseTest {
 
 		// check results:
 		debug.Debugger.out("SQL-D: {" + cmd + "}->RESULT: {" + result + "}");
-		assertEquals(	"INSERT INTO " + tableName + " (" + Entity.KEY_NAME+", " + Entity.VALUE_NAME +
-						", Name) VALUES ('','',"+newValues+")",cmd);
+		String expectedCmd =	"INSERT INTO " + tableName + " (" ;
+		boolean isFirst = true;
+		for (Attribute a : e.getMyAttributes().getMyAttributes()) {
+			if (!a.isPrimary()) {
+				if (isFirst) {
+					expectedCmd += a.getName(); 
+					isFirst = false;
+				} else {
+					expectedCmd += ", " + a.getName();
+				}
+			}
+		}
+		expectedCmd += ") VALUES (";
+		isFirst = true;
+		for (Attribute a : e.getMyAttributes().getMyAttributes()) {
+			if (!a.isPrimary()) {
+				if (isFirst) {
+					if (a.isValue())
+						 expectedCmd += a.getValue(); 
+					else expectedCmd += "'" + a.getValue() + "'"; 
+					isFirst = false;
+				} else {
+					if (a.isValue())
+						 expectedCmd += "," + a.getValue(); 
+					else expectedCmd += ",'" + a.getValue() + "'"; 
+				}
+			}
+		}
+		expectedCmd += ")";
+		debug.Debugger.out("SQL-Exp: {" + expectedCmd + "}");
+		assertEquals( expectedCmd, cmd);
 		assertEquals(true, (result >= 0) );
 	}
 
 		
-	public static void clearDBTest () throws Exception {
-		
-		// @TODO Delete DB-file if exists
-		
-		debug.Debugger.out("Test DB cleaning...");
-		cleanTableTest("Card");
-		cleanTableTest("Stack");
-		cleanTableTest("Door");
-		cleanTableTest("User");
-		cleanTableTest("Side");
-		cleanTableTest("Learn");
-		cleanTableTest("Login");
-	}
-	
 	public static void myTest() throws Exception {
 		debug.Debugger.out("Test LKDatabase (@HOME_PATH:"+Environment.getParameter(EnvironementParameterName.HOME_PATH)+")...");
-		Environment.debug();
+
+		Environment.debug();  // just show environment var's
 		clearDBTest();
 
-		debug.Debugger.out("Test Doors...");
+		debug.Debugger.out("Test Insert Doors...");
 		Attribute[] attrs = {new Attribute("Name","hallo!!!")};
 		createNewEntryTest("Door", attrs);
-		
-		ArrayList<String> aList = e.getDataList("SELECT name FROM Door");
+
+		debug.Debugger.out("Test reading Doors...");
+		ArrayList<String> aList = e.getDataList("SELECT * FROM Door");
+		// check results for reading data:
 		cmd = e.getMyDBDriver().getLastSQLCommand();
-		debug.Debugger.out("DATA: {"+cmd+"}");
-		assertEquals("SELECT name FROM Door",cmd);
-		assertEquals(false,e.getMyDBDriver().isThereAResult()); // no more data is ok after get
-		aList = e.getDataList("SELECT name FROM Door"); // again
+		debug.Debugger.out("DATA: {" + cmd + "}");
+		assertEquals("SELECT * FROM Door",cmd);
+		assertEquals(false, e.getMyDBDriver().isThereAResult()); // no more data is ok after get
+
+		aList = e.getDataList("SELECT Name FROM Door"); // do it again
+		// check results for reading data:
 		debug.Debugger.out("SQL: {"+aList.get(0)+"}");
 		assertEquals("hallo!!!",aList.get(0));
 
-		e.getMyAttributes().getAttributeNamedAs("name").setValue("hallo2");
-		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
-		debug.Debugger.out("SQL: {"+cmd+"}");
-		assertEquals("INSERT INTO Door ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", Name) VALUES ('','','hallo2')",cmd);
-		int res = e.getMyDBDriver().executeCommand(cmd);
-		debug.Debugger.out("RESULT: {"+res+"}");
-		assertEquals(true,res>=0);
+		debug.Debugger.out("Test Insert Doors after reading...");
+		Attribute[] attrs2 = {new Attribute("Name","hallo2")};
+		createNewEntryTest("Door", attrs2);
 
-		String FK_ID = e.getEntityID("name","hallo2");
-		debug.Debugger.out("SQL: ("+FK_ID+")");
-		//assertEquals(2,FK_ID); wechselt immer, solange kein DROP TABLE, evtl. mit MIN(ID) herausfindbar
+		debug.Debugger.out("Test PK ID...");
+		String PK_ID = e.getEntityID("Name","hallo2");
+		debug.Debugger.out("SQL: (" + PK_ID + ")");
+		assertEquals(true,Integer.parseInt(PK_ID) > 0);// ID wechselt immer, solange kein DROP TABLE, evtl. mit MIN(ID) herausfindbar
 		e.getMyDBDriver().closeDB();
 	
-		debug.Debugger.out("Test Users...");
-		e = dataBaseModel.getMyTables().get("User");
-		e.getMyAttributes().getAttributeNamedAs("Username").setValue("local");
-		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
-		debug.Debugger.out("SQL: {"+cmd+"}");
-		assertEquals("INSERT INTO User ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", ActualScore, Username, Email, Password, Salz, HighScore, UserType) VALUES ('','',0,'local','','','',0,0)",cmd);
-		res = e.getMyDBDriver().executeCommand(cmd);
-		debug.Debugger.out("RESULT: {"+res+"}");
-		assertEquals(true,res>=0);
-		e.getMyDBDriver().closeDB();
-
-		debug.Debugger.out("Test Stacks...");
-		e = dataBaseModel.getMyTables().get("Stack");
-		//e.closeDB();
-		String door_id = dataBaseModel.getMyTables().get("Door").getEntityID("name", "hallo2");
+		debug.Debugger.out("Test Insert Users...");
+		Attribute[] attrs3 = {new Attribute("Username","local"), new Attribute("Email","user1@mail.ch")};
+		createNewEntryTest("User", attrs3);
+		Attribute[] attrs4 = {new Attribute("Username","global"), new Attribute("Email","user2@mail.ch")};
+		createNewEntryTest("User", attrs4);
+		
+		debug.Debugger.out("Test Get Door Ref...");
+		e = dataBaseModel.getMyTables().get("Door");
+		String door_id = e.getEntityID("name", "hallo2");
+		// check results:
 		cmd = e.getMyDBDriver().getLastSQLCommand();
+		e.getMyDBDriver().closeDB();
 		debug.Debugger.out("SQL: {"+cmd+"}");
 		assertEquals("SELECT PK_Door FROM Door WHERE name = 'hallo2' ",cmd);
-		String user_id = dataBaseModel.getMyTables().get("User").getEntityID("Username", "local");
-		dataBaseModel.getMyTables().get("Door").getMyDBDriver().closeDB();
-		dataBaseModel.getMyTables().get("User").getMyDBDriver().closeDB();
-		assertNotEquals(door_id,"{null}");
-		assertNotEquals(user_id,"{null}");
+		
+		debug.Debugger.out("Test Get User Ref...");
+		e = dataBaseModel.getMyTables().get("User");
+		String user_id = e.getEntityID("Username", "local");
+		// check results:
+		e.getMyDBDriver().closeDB();
 		assertNotEquals(door_id,null);
 		assertNotEquals(user_id,null);
-		e.getMyAttributes().getAttributeNamedAs("FK_DOOR").setValue(door_id);
-		e.getMyAttributes().getAttributeNamedAs("FK_USER").setValue(user_id);
-		e.getMyAttributes().getAttributeNamedAs("name").setValue("hh1");
-		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
-		debug.Debugger.out("SQL: {"+cmd+"}"+door_id+"/"+user_id);
-		assertEquals("INSERT INTO Stack ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", Name, Description, FK_Door, FK_User) VALUES ('','','hh1','',"+door_id+","+user_id+")",cmd);
-		res = e.getMyDBDriver().executeCommand(cmd);
-		debug.Debugger.out("RESULT: {"+res+"}");
-		assertEquals(true,res>=0);
-		e.getMyDBDriver().closeDB();
+
+		debug.Debugger.out("Test Insert into Stacks...");
+		Attribute[] attrs6 = {new Attribute("FK_Door",door_id), 
+							  new Attribute("FK_User",user_id),
+							  new Attribute("Name","hh1")};
+		createNewEntryTest("Stack", attrs6);
 
 		debug.Debugger.out("Test Cards...");
-		e=dataBaseModel.getMyTables().get("Card");
-		e.getMyAttributes().getAttributeNamedAs("Frontside").setValue("hallo!!!");
-		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
-		debug.Debugger.out("SQL: {"+cmd+"}");
-		assertEquals("INSERT INTO Card ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", FK_Stack, Frontside, Backside, Priority, Color, Link, Description, Date) VALUES ('','',0,'hallo!!!','',0,'','','','')",cmd);
-		res = e.getMyDBDriver().executeCommand(cmd);
-		debug.Debugger.out("RESULT: {"+res+"}");
-		assertEquals(true,res>=0);
+		Attribute[] attrs5 = {new Attribute("Frontside","hallo...")};
+		createNewEntryTest("Card", attrs5);
+
 		e.getMyDBDriver().closeDB();
 	}
 

@@ -27,6 +27,10 @@ public class AttributeList {
 	private PrimaryKey myPrimary = null;
 
 
+	public ArrayList<Attribute> getMyAttributes() {
+		return myAttributes;
+	}
+
 	public void debug () {
 		for (Attribute a : myAttributes) {
 			System.out.println("A:"+a.getName()+"/"+a.isPrimary());
