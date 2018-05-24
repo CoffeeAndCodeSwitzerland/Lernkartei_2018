@@ -12,6 +12,8 @@ import basics.Environment;
 import basics.Environment.EnvironementParameterName;
 import database.Entity;
 import database.SQLHandler;
+import database.columns.Attribute;
+import database.columns.AttributeList;
 import persistence.LernKarteiDB;
 
 /**
@@ -20,12 +22,13 @@ import persistence.LernKarteiDB;
  */
 public class LKDatabaseTest {
 
-	final static LernKarteiDB lk = new LernKarteiDB();
+	final static LernKarteiDB dataBaseModel = new LernKarteiDB();
 	static String cmd;
+	static int result;
 	static Entity e;
 
-	public static void cleanTable(String name) throws Exception {
-		e = lk.getMyTables().get(name);
+	public static void cleanTableTest(String name) throws Exception {
+		e = dataBaseModel.getMyTables().get(name);
 		int res = e.delValues();
 		debug.Debugger.out("RESULT: {"+res+"}");
 		assertEquals(true,res>=0);
@@ -33,43 +36,73 @@ public class LKDatabaseTest {
 		e.getMyDBDriver().closeDB();
 	}
 	
+	/**
+	 * Crate a new entry in a table
+	 * DB objects are predefined in dataBaseModel
+	 * 
+	 * @param tableName
+	 * @param values
+	 * @throws Exception
+	 */
+	public static int createNewEntry(String tableName, Attribute[] newValues) throws Exception {
+		Entity tab = dataBaseModel.getMyTables().get(tableName); // seek Table-Object
+		AttributeList tabAttributes = tab.getMyAttributes();   // get his Attributes (Objects)
+		for (Attribute a : newValues) {
+			tabAttributes.getAttributeNamedAs(a.getName()).setValue(a.getValue()); // set the new values
+		}
+		cmd = SQLHandler.insertIntoTableCommand(tableName,tabAttributes); // execute the insert command
+		return tab.getMyDBDriver().executeCommand(cmd); // execute Insert Command
+	}
+	
+	public static void createNewEntryTest(String tableName, Attribute[] newValues) throws Exception {
+
+		result = createNewEntry(tableName, newValues); // generate SQL Insert Command into cmd
+
+		// check results:
+		debug.Debugger.out("SQL-D: {" + cmd + "}->RESULT: {" + result + "}");
+		assertEquals(	"INSERT INTO " + tableName + " (" + Entity.KEY_NAME+", " + Entity.VALUE_NAME +
+						", Name) VALUES ('','',"+newValues+")",cmd);
+		assertEquals(true, (result >= 0) );
+	}
+
+		
+	public static void clearDBTest () throws Exception {
+		
+		// @TODO Delete DB-file if exists
+		
+		debug.Debugger.out("Test DB cleaning...");
+		cleanTableTest("Card");
+		cleanTableTest("Stack");
+		cleanTableTest("Door");
+		cleanTableTest("User");
+		cleanTableTest("Side");
+		cleanTableTest("Learn");
+		cleanTableTest("Login");
+	}
+	
 	public static void myTest() throws Exception {
 		debug.Debugger.out("Test LKDatabase (@HOME_PATH:"+Environment.getParameter(EnvironementParameterName.HOME_PATH)+")...");
 		Environment.debug();
-		// @TODO Del DB if exists
-		debug.Debugger.out("Test DB cleaning...");
-		cleanTable("Card");
-		cleanTable("Stack");
-		cleanTable("Door");
-		cleanTable("User");
-		cleanTable("Side");
-		cleanTable("Learn");
-		cleanTable("Login");
+		clearDBTest();
 
 		debug.Debugger.out("Test Doors...");
-		Entity de = lk.getMyTables().get("Door");
-		de.getMyAttributes().debug();
-		de.getMyAttributes().getAttributeNamedAs("Name").setValue("hallo!!!");
-		cmd = SQLHandler.insertIntoTableCommand(de.getMyTableName(),de.getMyAttributes());
-		debug.Debugger.out("SQL-D: {"+cmd+"}");
-		assertEquals("INSERT INTO Door ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", Name) VALUES ('','','hallo!!!')",cmd);
-		int res = de.getMyDBDriver().executeCommand(cmd);
-		debug.Debugger.out("RESULT: {"+res+"}");
-		assertEquals(true,res>=0);
-		ArrayList<String> aList = de.getDataList("SELECT name FROM Door");
-		cmd = de.getMyDBDriver().getLastSQLCommand();
+		Attribute[] attrs = {new Attribute("Name","hallo!!!")};
+		createNewEntryTest("Door", attrs);
+		
+		ArrayList<String> aList = e.getDataList("SELECT name FROM Door");
+		cmd = e.getMyDBDriver().getLastSQLCommand();
 		debug.Debugger.out("DATA: {"+cmd+"}");
 		assertEquals("SELECT name FROM Door",cmd);
-		assertEquals(false,de.getMyDBDriver().isThereAResult()); // no more data is ok after get
-		aList = de.getDataList("SELECT name FROM Door"); // again
+		assertEquals(false,e.getMyDBDriver().isThereAResult()); // no more data is ok after get
+		aList = e.getDataList("SELECT name FROM Door"); // again
 		debug.Debugger.out("SQL: {"+aList.get(0)+"}");
 		assertEquals("hallo!!!",aList.get(0));
 
-		de.getMyAttributes().getAttributeNamedAs("name").setValue("hallo2");
-		cmd = SQLHandler.insertIntoTableCommand(de.getMyTableName(),de.getMyAttributes()); 
+		e.getMyAttributes().getAttributeNamedAs("name").setValue("hallo2");
+		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
 		debug.Debugger.out("SQL: {"+cmd+"}");
 		assertEquals("INSERT INTO Door ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", Name) VALUES ('','','hallo2')",cmd);
-		res = de.getMyDBDriver().executeCommand(cmd);
+		res = e.getMyDBDriver().executeCommand(cmd);
 		debug.Debugger.out("RESULT: {"+res+"}");
 		assertEquals(true,res>=0);
 
@@ -79,7 +112,7 @@ public class LKDatabaseTest {
 		de.getMyDBDriver().closeDB();
 	
 		debug.Debugger.out("Test Users...");
-		e = lk.getMyTables().get("User");
+		e = dataBaseModel.getMyTables().get("User");
 		e.getMyAttributes().getAttributeNamedAs("Username").setValue("local");
 		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
 		debug.Debugger.out("SQL: {"+cmd+"}");
@@ -90,15 +123,15 @@ public class LKDatabaseTest {
 		e.getMyDBDriver().closeDB();
 
 		debug.Debugger.out("Test Stacks...");
-		e = lk.getMyTables().get("Stack");
+		e = dataBaseModel.getMyTables().get("Stack");
 		//e.closeDB();
-		String door_id = lk.getMyTables().get("Door").getEntityID("name", "hallo2");
+		String door_id = dataBaseModel.getMyTables().get("Door").getEntityID("name", "hallo2");
 		cmd = de.getMyDBDriver().getLastSQLCommand();
 		debug.Debugger.out("SQL: {"+cmd+"}");
 		assertEquals("SELECT PK_Door FROM Door WHERE name = 'hallo2' ",cmd);
-		String user_id = lk.getMyTables().get("User").getEntityID("Username", "local");
-		lk.getMyTables().get("Door").getMyDBDriver().closeDB();
-		lk.getMyTables().get("User").getMyDBDriver().closeDB();
+		String user_id = dataBaseModel.getMyTables().get("User").getEntityID("Username", "local");
+		dataBaseModel.getMyTables().get("Door").getMyDBDriver().closeDB();
+		dataBaseModel.getMyTables().get("User").getMyDBDriver().closeDB();
 		assertNotEquals(door_id,"{null}");
 		assertNotEquals(user_id,"{null}");
 		assertNotEquals(door_id,null);
@@ -115,7 +148,7 @@ public class LKDatabaseTest {
 		e.getMyDBDriver().closeDB();
 
 		debug.Debugger.out("Test Cards...");
-		e=lk.getMyTables().get("Card");
+		e=dataBaseModel.getMyTables().get("Card");
 		e.getMyAttributes().getAttributeNamedAs("Frontside").setValue("hallo!!!");
 		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
 		debug.Debugger.out("SQL: {"+cmd+"}");

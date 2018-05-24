@@ -9,13 +9,6 @@ import debug.Logger;
 
 public class UserLogin extends Entity {
 
-	/**
-	 * @param tabName
-	 * @throws Exception 
-	 */
-	public UserLogin(DBDriver dbDriver, String tabName) throws Exception {
-		super(dbDriver, tabName,false);
-	}
 
 	/**
 	 * Fügt der Datenbank einen neuen User hinzu
