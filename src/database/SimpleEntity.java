@@ -11,8 +11,6 @@ import database.columns.AttributeInterface.Datatype;
 import database.jdbc.DBDriver;
 import database.jdbc.DBDriver.ResultType;
 import debug.Logger;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Simple Entity (Table)
@@ -25,8 +23,20 @@ import lombok.Setter;
  */
 public class SimpleEntity extends AttributeListHandler {
 
-	public @Getter DBDriver myDBDriver; // should never be null
-	protected @Getter @Setter String myTableName;  // should never be null
+	public  DBDriver myDBDriver; // should never be null
+	protected   String myTableName;  // should never be null
+
+	public String getMyTableName() {
+		return myTableName;
+	}
+
+	public void setMyTableName(String myTableName) {
+		this.myTableName = myTableName;
+	}
+
+	public DBDriver getMyDBDriver() {
+		return myDBDriver;
+	}
 
 	/**
 	 * To create a DB table if it does not exist yet

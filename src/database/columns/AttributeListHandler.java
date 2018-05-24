@@ -1,8 +1,7 @@
 package database.columns;
 
 import debug.Logger;
-import lombok.Getter;
-import lombok.Setter;
+
 
 /**
  * Simple Table 
@@ -15,8 +14,21 @@ import lombok.Setter;
  */
 public class AttributeListHandler {
 
-	final private @Getter AttributeList myAttributes = new AttributeList();
-	private @Getter @Setter boolean isCreated = false;
+	private  AttributeList myAttributes = new AttributeList();
+
+	public boolean isCreated() {
+		return isCreated;
+	}
+
+	public void setCreated(boolean isCreated) {
+		this.isCreated = isCreated;
+	}
+
+	public AttributeList getMyAttributes() {
+		return myAttributes;
+	}
+
+	private boolean isCreated = false;
 
 
 	/*

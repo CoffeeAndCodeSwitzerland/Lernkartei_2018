@@ -8,8 +8,7 @@ import java.sql.SQLTimeoutException;
 import java.sql.Statement;
 
 import debug.Logger;
-import lombok.Getter;
-import lombok.Setter;
+
 
 /**
  * Abstract class DB Driver
@@ -18,6 +17,29 @@ import lombok.Setter;
  */
 public abstract class DBDriver {
 
+	public String getDbURL() {
+		return dbURL;
+	}
+
+	public void setDbURL(String dbURL) {
+		this.dbURL = dbURL;
+	}
+
+	public ResultSet getLastResultSet() {
+		return lastResultSet;
+	}
+
+	public void setLastResultSet(ResultSet lastResultSet) {
+		this.lastResultSet = lastResultSet;
+	}
+
+	public String getLastSQLCommand() {
+		return lastSQLCommand;
+	}
+
+	public void setLastSQLCommand(String lastSQLCommand) {
+		this.lastSQLCommand = lastSQLCommand;
+	}
 	public enum ResultType {
 		DONE, NOTDONE, WARNING, FATAL_ERROR, NO_CONNECTION_ERROR, WRONG_PRARMETER_ERROR
 	}
@@ -25,9 +47,9 @@ public abstract class DBDriver {
 	private String sqlDriver = null;
 	private Connection connection;
 	private Statement stmt;
-	private @Getter @Setter String dbURL = null;
-	private @Getter @Setter ResultSet lastResultSet;
-	private @Getter @Setter String lastSQLCommand;
+	private   String dbURL = null;
+	private   ResultSet lastResultSet;
+	private   String lastSQLCommand;
 
 	/**
 	 * Protected Constructor

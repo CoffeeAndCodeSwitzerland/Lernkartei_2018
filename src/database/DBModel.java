@@ -7,7 +7,6 @@ import database.columns.Attribute;
 import database.columns.AttributeList;
 import database.jdbc.DBDriver;
 import database.jdbc.SQLiteDriver;
-import lombok.Getter;
 /**
  * A DB has one or more tables with 3 to many attributes
  * 
@@ -17,8 +16,12 @@ import lombok.Getter;
 public class DBModel {
 
 	private final DBDriver myWLCDB;
-	private final @Getter HashMap<String,Entity> myTables = new HashMap<String,Entity>();
+	private final HashMap<String,Entity> myTables = new HashMap<String,Entity>();
 
+
+	public HashMap<String, Entity> getMyTables() {
+		return myTables;
+	}
 
 	private void createAllTableObjectsFor(DBDriver dbDriver, String[] tables) {
 		for (String tab : tables) {

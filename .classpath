@@ -10,6 +10,5 @@
 	<classpathentry kind="lib" path="src/database/jdbc/mysql-connector-java-5.1.42-bin.jar"/>
 	<classpathentry kind="lib" path="src/database/jdbc/sqlite-jdbc-3.8.11.2.jar"/>
 	<classpathentry kind="lib" path="src/processing/core.jar"/>
-	<classpathentry kind="lib" path="src/basics/lombok.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
