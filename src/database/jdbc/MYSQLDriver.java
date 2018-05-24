@@ -78,8 +78,8 @@ final public class MYSQLDriver extends DBDriver {
 	 * @see database.jdbc.DBDriver#executeQuery(java.lang.String)
 	 */
 	@Override
-	public boolean executeQuery(String query) {
+	public ResultType executeQuery(String query) {
 		// TODO Auto-generated method stub
-		return false;
+		return ResultType.FATAL_ERROR;
 	}
 }

@@ -1,6 +1,6 @@
 package database.jdbc;
 
-import debug.Logger;
+import persistence.DBGlobals;
 
 
 /**
@@ -9,7 +9,7 @@ import debug.Logger;
  */
 final public class SQLiteDriver extends DBDriver {
 
-	private String urlBase = "jdbc:sqlite:" + globals.Environment.getDatabasePath();
+	private String urlBase = "jdbc:sqlite:" + DBGlobals.getDatabasePath();
 
 	public SQLiteDriver(String dbName) {
 		super("org.sqlite.JDBC");
@@ -21,18 +21,18 @@ final public class SQLiteDriver extends DBDriver {
 	 * 
 	 * @param query
 	 * @return the result set or null for errors
+	 * @throws Exception 
 	 */
-	public boolean executeQuery(String query) {
+	public ResultType executeQuery(String query) throws Exception {
 		if (query != null) {
 			if (query.startsWith("SELECT")) {
 				return doQuery(query);
 			} else {
-				Logger.out("invalid SQL query {null}!");
+				throw new Exception ("invalid SQL query {null}!");
 			}
 		} else {
-			Logger.out("query is {null}!");
+			throw new Exception ("query is {null}!");
 		}
-		return false; // null for errors
 	}
 
 	/**
@@ -40,17 +40,17 @@ final public class SQLiteDriver extends DBDriver {
 	 * 
 	 * @param SQLcommand
 	 * @return 0, 1,2 or -1 on error
+	 * @throws Exception 
 	 */
-	public int executeCommand(String SQLcommand) {
+	public int executeCommand(String SQLcommand) throws Exception {
 		if (SQLcommand != null) {
 			if (!SQLcommand.startsWith("SELECT")) {
 				return doCommand(SQLcommand);  // for CREATE, UPDATE, DELETE, INSERT
 			} else {
-				Logger.out("Invalid SQL command to execute", SQLcommand);
+				throw new Exception ("Invalid SQL command to execute "+SQLcommand);
 			}
 		} else {
-			Logger.out("Command is null");
+			throw new Exception ("Command is null");
 		}
-		return -1;
 	}
 }

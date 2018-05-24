@@ -11,7 +11,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-import globals.Environment;
+import basics.Environment;
+import basics.Environment.EnvironementParameterName;
+import persistence.DBGlobals;
 
 /**
  * Purpose:	
@@ -39,7 +41,7 @@ public final class Logger {
 	
 	public static void init () {
 		if (myLogfile == null) {
-		    myLogfile = Paths.get(Environment.getDatabaseLocation()+Environment.getFileSep()+"LogfileOf"+Environment.getUserName()+".txt");
+		    myLogfile = Paths.get(DBGlobals.getDatabasePath()+"LogfileOf"+Environment.getParameter(EnvironementParameterName.USER_NAME)+".txt");
 		    try {
 				Files.createDirectories(myLogfile.getParent());			
 				Files.createFile(myLogfile);
@@ -67,7 +69,7 @@ public final class Logger {
 				// wrong: appendActive = true; // activate append after first
 				// line automaticly
 			}
-			myFile.writeBytes(logLine + Environment.getEndOfLine()); // .writeChars()
+			myFile.writeBytes(logLine + Environment.getParameter(EnvironementParameterName.EOF_LINE)); // .writeChars()
 																// writes UTF16
 																// Chars!
 

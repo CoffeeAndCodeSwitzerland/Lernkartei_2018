@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-import globals.Environment;
+import basics.Environment.EnvironementParameterName;
 
 public class MyFile extends File {
 
@@ -28,7 +28,7 @@ public class MyFile extends File {
 		File f = null;
 		RandomAccessFile myFile = null;
 		try {
-			f = new File(Environment.getActualPath() + Environment.getFileSep() + this.getName());
+			f = new File(Environment.getParameter(EnvironementParameterName.ACTUAL_PATH) + Environment.getParameter(EnvironementParameterName.FILE_SEP) + this.getName());
 			long fileLength = f.length();
 			myFile = new RandomAccessFile(f, "rw");
 
@@ -41,7 +41,8 @@ public class MyFile extends File {
 				// wrong: appendActive = true; // activate append after first
 				// line automaticly
 			}
-			myFile.writeBytes(logLine + Environment.getEndOfLine()); // .writeChars()
+			myFile.writeBytes(logLine + Environment.getParameter(EnvironementParameterName.EOF_LINE)); 
+																// .writeChars()
 																// writes UTF16
 																// Chars!
 

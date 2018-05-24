@@ -1,7 +1,5 @@
 package debug;
 
-import globals.Globals;
-
 public final class Debugger {
 
 	/*-
@@ -16,7 +14,7 @@ public final class Debugger {
 	private static boolean debugActive = true;
 
 	public static void out(String debugText, int calls, String param1, String param2) {
-		if (debugActive && Globals.DebuggerIsOn) {
+		if (debugActive && DebugSettings.DebuggerIsOn) {
 			if (debugText == null) {
 				out();
 			} else {
@@ -45,7 +43,7 @@ public final class Debugger {
 	public static void out(String debugText, String param1, String param2) {
 		if (param1 == null) param1 = "{null}";
 		if (param2 == null) param2 = "{null}";
-		if (debugActive && Globals.DebuggerIsOn) {
+		if (debugActive && DebugSettings.DebuggerIsOn) {
 			if (debugText == null) {
 				out();
 			} else {
@@ -77,19 +75,19 @@ public final class Debugger {
 	}
 
 	public static void out() {
-		if (debugActive && Globals.DebuggerIsOn) {
+		if (debugActive && DebugSettings.DebuggerIsOn) {
 			System.out.print("*");
 		}
 	}
 
 	public static void eol() {
-		if (debugActive && Globals.DebuggerIsOn) {
+		if (debugActive && DebugSettings.DebuggerIsOn) {
 			System.out.println("");
 		}
 	}
 
 	public static void out(char c, int len) {
-		if (debugActive && Globals.DebuggerIsOn) {
+		if (debugActive && DebugSettings.DebuggerIsOn) {
 			for (int i = 0; i < len; i++) {
 				System.out.print(c);
 			}
@@ -98,7 +96,7 @@ public final class Debugger {
 	}
 
 	public static void title(String debugText) {
-		if (debugActive && Globals.DebuggerIsOn) {
+		if (debugActive && DebugSettings.DebuggerIsOn) {
 			out(debugText);
 			out('=', debugText.length());
 		}
