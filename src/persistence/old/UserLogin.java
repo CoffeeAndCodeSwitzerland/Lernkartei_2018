@@ -10,6 +10,11 @@ import debug.Logger;
 public class UserLogin extends Entity {
 
 
+	public UserLogin(DBDriver newDBdriver, String tabName) throws Exception {
+		super(newDBdriver, tabName);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * Fügt der Datenbank einen neuen User hinzu
 	 * 

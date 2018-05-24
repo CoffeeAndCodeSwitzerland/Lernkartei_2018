@@ -102,14 +102,14 @@ public class LKDatabaseTest {
 		cmd = SQLHandler.insertIntoTableCommand(e.getMyTableName(),e.getMyAttributes()); 
 		debug.Debugger.out("SQL: {"+cmd+"}");
 		assertEquals("INSERT INTO Door ("+Entity.KEY_NAME+", "+Entity.VALUE_NAME+", Name) VALUES ('','','hallo2')",cmd);
-		res = e.getMyDBDriver().executeCommand(cmd);
+		int res = e.getMyDBDriver().executeCommand(cmd);
 		debug.Debugger.out("RESULT: {"+res+"}");
 		assertEquals(true,res>=0);
 
-		String FK_ID = de.getEntityID("name","hallo2");
+		String FK_ID = e.getEntityID("name","hallo2");
 		debug.Debugger.out("SQL: ("+FK_ID+")");
 		//assertEquals(2,FK_ID); wechselt immer, solange kein DROP TABLE, evtl. mit MIN(ID) herausfindbar
-		de.getMyDBDriver().closeDB();
+		e.getMyDBDriver().closeDB();
 	
 		debug.Debugger.out("Test Users...");
 		e = dataBaseModel.getMyTables().get("User");
@@ -126,7 +126,7 @@ public class LKDatabaseTest {
 		e = dataBaseModel.getMyTables().get("Stack");
 		//e.closeDB();
 		String door_id = dataBaseModel.getMyTables().get("Door").getEntityID("name", "hallo2");
-		cmd = de.getMyDBDriver().getLastSQLCommand();
+		cmd = e.getMyDBDriver().getLastSQLCommand();
 		debug.Debugger.out("SQL: {"+cmd+"}");
 		assertEquals("SELECT PK_Door FROM Door WHERE name = 'hallo2' ",cmd);
 		String user_id = dataBaseModel.getMyTables().get("User").getEntityID("Username", "local");
