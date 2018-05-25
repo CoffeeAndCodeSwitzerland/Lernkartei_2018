@@ -186,6 +186,12 @@ public class LKDatabaseTest {
 		Attribute[] attrs6 = {new Attribute("Frontside","hallo...")};
 		createNewEntryTest("Card", attrs6);
 
+		// @TODO test update
+		
+		// @TODO test delete one entry from table
+		
+		// @TODO test delete recursive
+		
 		e.getMyDBDriver().closeDB();
 	}
 
