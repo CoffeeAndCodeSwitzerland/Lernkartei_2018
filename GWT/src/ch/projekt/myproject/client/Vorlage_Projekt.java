@@ -1,24 +1,10 @@
 package src.ch.projekt.myproject.client;
 
-import src.ch.projekt.myproject.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.KeyCodes;
-import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.event.dom.client.KeyUpHandler;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DecoratorPanel;
-import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -42,7 +28,7 @@ public class Vorlage_Projekt implements EntryPoint {
 		Button ButtonProfil = new Button("Profil");
 		
 		Label LabelGreeting = new Label("Hello *Username* we have missed your dearly");
-		// We can add style names to widgets
+		
 		ButtonSingleplayer.setPixelSize(100, 50);
 		ButtonMultiplayer.setPixelSize(100, 50);
 		ButtonOptions.setPixelSize(100, 50);
@@ -57,8 +43,8 @@ public class Vorlage_Projekt implements EntryPoint {
 		ButtonOptions.setStyleName("gwt-ButtonMyOwn");
 		ButtonProfil.setStyleName("gwt-ButtonMyOwn");
 		
-		// Add the nameField and sendButton to the RootPanel
-		// Use RootPanel.get() to get the entire body element
+		fp.setStyleName("wrapper");
+		
 		RootPanel.get("LabelGreetingsContainer").add(LabelGreeting);
 		RootPanel.get("ButtonContainerTop").add(ButtonProfil);
 		RootPanel.get("ButtonContainerMiddle").add(ButtonMultiplayer);
@@ -66,7 +52,6 @@ public class Vorlage_Projekt implements EntryPoint {
 		RootPanel.get("ButtonContainerFoot").add(ButtonOptions);
 		
 		RootPanel.get("Wrapper").add(fp);
-		fp.setStyleName("wrapper");
 		
 		
 	}

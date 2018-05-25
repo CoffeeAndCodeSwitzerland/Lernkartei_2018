@@ -22,16 +22,9 @@ h1 {
 	margin-left: 1.2em;
 	border-radius: 50%;
 }
-.button{
-	background-color: red;
-}
 
 tr {
 	text-align: center;
-}
-
-table, tr, td, h1, label{
-	
 }
 
 .wrapper {

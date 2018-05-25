@@ -12,5 +12,5 @@
 	<classpathentry kind="lib" path="src/database/jdbc/sqlite-jdbc-3.8.11.2.jar"/>
 	<classpathentry kind="lib" path="src/processing/core.jar"/>
 	<classpathentry kind="con" path="com.gwtplugins.gwt.eclipse.core.GWT_CONTAINER"/>
-	<classpathentry kind="output" path="GWT-Fenster/war/WEB-INF/classes"/>
+	<classpathentry kind="output" path="GWT-Code/war/WEB-INF/classes"/>
 </classpath>
