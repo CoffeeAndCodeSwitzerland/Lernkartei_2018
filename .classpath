@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="src" path="test"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="src/database/jdbc/mysql-connector-java-5.1.42-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/database/jdbc/sqlite-jdbc-3.8.11.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/processing/core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/gwt-user.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/doc/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/gwt-codeserver.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/doc/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/gwt-dev.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/doc/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/validation-api-1.0.0.GA.jar" sourcepath="C:/Users/WISS/.p2/pool/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201710131939/gwt-2.7.0/validation-api-1.0.0.GA-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="src/database/jdbc/mysql-connector-java-5.1.42-bin.jar"/>
-	<classpathentry kind="lib" path="src/database/jdbc/sqlite-jdbc-3.8.11.2.jar"/>
-	<classpathentry kind="lib" path="src/processing/core.jar"/>
-	<classpathentry kind="con" path="com.gwtplugins.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="output" path="GWT-Code/war/WEB-INF/classes"/>
 </classpath>
