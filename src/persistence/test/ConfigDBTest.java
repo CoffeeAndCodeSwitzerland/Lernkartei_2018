@@ -18,9 +18,11 @@ class ConfigDBTest {
 	public static void cleanTable(String name) throws Exception {
 		e = conf.getMyTables().get(name);
 		int res = e.delValues();
+		
 		debug.Debugger.out("RESULT: {"+res+"}");
 		assertEquals(true,res>=0);
 		assertEquals("PK_"+e.getMyTableName(),e.getMyAttributes().getPrimaryKey().getName());
+		
 		e.getMyDBDriver().closeDB();
 	}
 	

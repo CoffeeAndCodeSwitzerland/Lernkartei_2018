@@ -1,13 +1,26 @@
-2018-05-24-83789410<0.1>: Start
-2018-05-24-83789340<0.0>: connection was closed before command CREATE TABLE IF NOT EXISTS Side (PK_Side INTEGER PRIMARY KEY AUTOINCREMENT,KEY_NAME TEXT,KEY_VALUE TEXT,Link TEXT,BackgoundColor TEXT,Text TEXT,SideOrder INTEGER)
-2018-05-24-83792810<3.4>: connection was closed before command INSERT INTO Door (KEY_NAME, KEY_VALUE, Name) VALUES ('','','hallo!!!')
-2018-05-24-83793070<0.3>: connection was closed before command INSERT INTO User (KEY_NAME, KEY_VALUE, ActualScore, Username, Email, Password, Salz, HighScore, UserType) VALUES ('','',0,'local','user1@mail.ch','','',0,0)
-2018-05-24-83793280<0.2>: connection was closed before query SELECT PK_User FROM User WHERE Username = 'local' 
-2018-05-24-83793300<0.0>: connection was closed before command INSERT INTO Stack (KEY_NAME, KEY_VALUE, Name, Description, FK_Door, FK_User) VALUES ('','','hh1','',2,1)
-2018-05-25-84897560<0.0>: File creation problem!
-2018-05-25-84897560<0.0>: Start
-2018-05-25-84897560<0.0>: connection was closed before command CREATE TABLE IF NOT EXISTS Side (PK_Side INTEGER PRIMARY KEY AUTOINCREMENT,KEY_NAME TEXT,KEY_VALUE TEXT,Link TEXT,BackgoundColor TEXT,Text TEXT,SideOrder INTEGER)
-2018-05-25-84900060<2.5>: connection was closed before command INSERT INTO Door (KEY_NAME, KEY_VALUE, Name) VALUES ('','','hallo!!!')
-2018-05-25-84900370<0.3>: connection was closed before command INSERT INTO User (KEY_NAME, KEY_VALUE, ActualScore, Username, Email, Password, Salz, HighScore, UserType) VALUES ('','',0,'local','user1@mail.ch','','',0,0)
-2018-05-25-84900530<0.2>: connection was closed before query SELECT PK_User FROM User WHERE Username = 'local' 
-2018-05-25-84900530<0.0>: connection was closed before command INSERT INTO Stack (KEY_NAME, KEY_VALUE, Name, Description, FK_Door, FK_User) VALUES ('','','hh1','',4,3)
+2018-05-26-21202800<0.2>: Start
+2018-05-26-21202620<0.0>: connection was closed before command CREATE TABLE IF NOT EXISTS Config (PK_Config INTEGER PRIMARY KEY AUTOINCREMENT,KEY_NAME TEXT,KEY_VALUE TEXT)
+2018-05-26-21205170<2.4>: connection was closed before query SELECT * FROM Config WHERE KEY_NAME = 'test_key' 
+2018-05-26-21205180<0.0>: no values found!
+2018-05-26-21205370<0.2>: no values found!
+2018-05-26-22800250<0.1>: File creation problem!
+2018-05-26-22800260<0.0>: Start
+2018-05-26-22800170<0.0>: connection was closed before command CREATE TABLE IF NOT EXISTS Side (PK_Side INTEGER PRIMARY KEY AUTOINCREMENT,KEY_NAME TEXT,KEY_VALUE TEXT,Link TEXT,BackgoundColor TEXT,Text TEXT,SideOrder INTEGER)
+2018-05-26-22803340<3.1>: connection was closed before command INSERT INTO Door (KEY_NAME, KEY_VALUE, Name) VALUES ('','','hallo!!!')
+2018-05-26-22803630<0.3>: connection was closed before command INSERT INTO User (KEY_NAME, KEY_VALUE, ActualScore, Username, Email, Password, Salz, HighScore, UserType) VALUES ('','',0,'local','user1@mail.ch','','',0,0)
+2018-05-26-22803850<0.2>: connection was closed before query SELECT PK_User FROM User WHERE Username = 'local' 
+2018-05-26-22803870<0.0>: connection was closed before command INSERT INTO Stack (KEY_NAME, KEY_VALUE, Name, Description, FK_Door, FK_User) VALUES ('','','hh1','',2,1)
+2018-05-26-69386050<0.1>: File creation problem!
+2018-05-26-69386080<0.0>: Start
+2018-05-26-69385970<0.0>: connection was closed before command CREATE TABLE IF NOT EXISTS Side (PK_Side INTEGER PRIMARY KEY AUTOINCREMENT,KEY_NAME TEXT,KEY_VALUE TEXT,Link TEXT,BackgoundColor TEXT,Text TEXT,SideOrder INTEGER)
+2018-05-26-69388730<2.6>: connection was closed before command INSERT INTO Door (KEY_NAME, KEY_VALUE, Name) VALUES ('','','hallo!!!')
+2018-05-26-69388950<0.2>: connection was closed before command INSERT INTO User (KEY_NAME, KEY_VALUE, ActualScore, Username, Email, Password, Salz, HighScore, UserType) VALUES ('','',0,'local','user1@mail.ch','','',0,0)
+2018-05-26-69389160<0.2>: connection was closed before query SELECT PK_User FROM User WHERE Username = 'local' 
+2018-05-26-69389180<0.0>: connection was closed before command INSERT INTO Stack (KEY_NAME, KEY_VALUE, Name, Description, FK_Door, FK_User) VALUES ('','','hh1','',4,3)
+2018-05-26-71416740<0.1>: File creation problem!
+2018-05-26-71416750<0.0>: Start
+2018-05-26-71416680<0.0>: connection was closed before command CREATE TABLE IF NOT EXISTS Side (PK_Side INTEGER PRIMARY KEY AUTOINCREMENT,KEY_NAME TEXT,KEY_VALUE TEXT,Link TEXT,BackgoundColor TEXT,Text TEXT,SideOrder INTEGER)
+2018-05-26-71419060<2.3>: connection was closed before command INSERT INTO Door (KEY_NAME, KEY_VALUE, Name) VALUES ('','','hallo!!!')
+2018-05-26-71419310<0.2>: connection was closed before command INSERT INTO User (KEY_NAME, KEY_VALUE, ActualScore, Username, Email, Password, Salz, HighScore, UserType) VALUES ('','',0,'local','user1@mail.ch','','',0,0)
+2018-05-26-71419520<0.2>: connection was closed before query SELECT PK_User FROM User WHERE Username = 'local' 
+2018-05-26-71419530<0.0>: connection was closed before command INSERT INTO Stack (KEY_NAME, KEY_VALUE, Name, Description, FK_Door, FK_User) VALUES ('','','hh1','',6,5)
